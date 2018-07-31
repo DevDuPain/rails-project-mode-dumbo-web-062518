@@ -31,8 +31,10 @@ Attendee.create(user_id: dan.id, event_id: event_2.id)
 Attendee.create(user_id: marlon.id, event_id: event_2.id)
 Attendee.create(user_id: marlon.id, event_id: event_3.id)
 
-all = {"morning" => true, "afternoon" => true, "evening" => true, "night" => true }
-random = {"morning" => true, "afternoon" => false, "evening" => true, "night" => false}
+# all = {"morning" => true, "day" => true, "evening" => true, "night" => true }
+# random = {"morning" => true, "day" => false, "evening" => true, "night" => false}
+all = 1111
+random = 1010
 Availability.create(user_id: dan.id, monday: all, tuesday: all, wednesday: all, thursday: all, friday: all, saturday: all, sunday: all)
 Availability.create(user_id: marlon.id, monday: all, tuesday: random, wednesday: all, thursday: random, friday: all, saturday: all, sunday: random)
 Availability.create(user_id: alex.id, monday: random, tuesday: random, wednesday: all, thursday: random, friday: random, saturday: all, sunday: random)
