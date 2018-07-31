@@ -38,7 +38,7 @@ Availability.create(user_id: marlon.id, monday: all, tuesday: random, wednesday:
 Availability.create(user_id: alex.id, monday: random, tuesday: random, wednesday: all, thursday: random, friday: random, saturday: all, sunday: random)
 
 Rank.create(ranker_id: dan.id, rankee_id: marlon.id, rank: 3)
-Rank.create(ranker_id: dan.id, rankee_id: alex.id, rank: 3)
+Rank.create(ranker_id: dan.id, rankee_id: alex.id, rank: 4)
 Rank.create(ranker_id: marlon.id, rankee_id: dan.id, rank: 2)
 Rank.create(ranker_id: alex.id, rankee_id: dan.id, rank: 1)
 Rank.create(ranker_id: alex.id, rankee_id: marlon.id, rank: 5)
