@@ -1,4 +1,4 @@
 class Attendee < ApplicationRecord
-  belongs_to :user
-  belongs_to :event
+  belongs_to :user, :inverse_of => :attending
+  belongs_to :event, :inverse_of => :attendees
 end
