@@ -1,0 +1,21 @@
+<h1>My profile</h1>
+
+<p>Name: <%= @user.full_name %></p>
+<p>Username: <%= @user.username %></p>
+<p>Birthdate: <%= @user.birthdate %></p>
+
+<h2>My Events</h2>
+<ul>
+  <% @user.events.each do |event| %>
+    <li><%= event %></li>
+  <% end %>
+</ul>
+
+<h2>My Availability</h2>
+
+<h2>My Network</h2>
+<ul>
+  <% @user.my_network.each do |rank| %>
+    <li><%= rank[:rankee] %> - <%= rank[:rank] %></li>
+  <% end %>
+</ul>
