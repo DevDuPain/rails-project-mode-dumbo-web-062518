@@ -1,3 +1,0 @@
-class AvailabilityController < ApplicationController
-
-end

@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :ranks, :class_name => 'Rank', :inverse_of => :ranker
 
   def my_network
-    @self.ranks.rankee.map do |rankee|
+    self.ranks.rankee.map do |rankee|
       rankee
       # a change has been made
     end
