@@ -17,4 +17,7 @@ dan = User.create(first_name: "Dan", last_name: "Chung", username: "danchung", e
 marlon = User.create(first_name: "Marlon", last_name: "DuPain", username: "marond", email: "test@test.com")
 alex = User.create(first_name: "Alex", last_name: "Neustein", username: "alexn", email: "test@test.com")
 
+flatiron = Location.create(name: "Flatiron School", address: "123 Lovely Lane", description: "#1 School")
+bridge_fresh = Location.create(name: "Bridge Fresh", address: "245 Lonely Lane", description: "#1 Deli")
+
 event_1 = Event.create(owner_id: dan.id, name: "Event 1", description: "The description of this event.", date: Time.now, location_id: 1)

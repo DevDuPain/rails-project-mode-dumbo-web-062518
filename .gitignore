@@ -4,4 +4,9 @@ dev/~$hedule appointments.docx
 .DS_Store
 .DS_Store
 
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
 /tmp
+*~
+Gemfile.lock
