@@ -1,7 +1,5 @@
 class EventsController < ApplicationController
 
-<<<<<<< HEAD
-=======
   def index
     @events = Event.all
   end
@@ -47,5 +45,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:owner_id, :name, :description, :date, :location_id, :required_rank)
   end
->>>>>>> eventviews
 end

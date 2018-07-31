@@ -2331,3 +2331,32 @@ Completed 200 OK in 253ms (Views: 220.6ms | ActiveRecord: 3.4ms)
 
 
 >>>>>>> eventviews
+Started GET "/events/1" for 127.0.0.1 at 2018-07-31 13:51:17 -0400
+  [1m[35m (19.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/marybeth/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/controllers/events_controller.rb:3: syntax error, unexpected <<
+<<<<<<< HEAD
+  ^
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/controllers/events_controller.rb:50: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> eventviews
+  ^):
+  
+app/controllers/events_controller.rb:3: syntax error, unexpected <<
+app/controllers/events_controller.rb:50: syntax error, unexpected >>, expecting keyword_end
+Started GET "/events/1" for 127.0.0.1 at 2018-07-31 13:52:40 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (19.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:22
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:2
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:3
+  [1m[36mAttendee Load (0.8ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = $1[0m  [["event_id", 1]]
+  ↳ app/views/events/show.html.erb:7
+  Rendered events/show.html.erb within layouts/application (187.5ms)
+Completed 200 OK in 1176ms (Views: 926.0ms | ActiveRecord: 67.6ms)
+
+
