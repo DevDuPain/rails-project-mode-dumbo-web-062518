@@ -6,9 +6,14 @@ class User < ApplicationRecord
   has_many :ranks, :class_name => 'Rank', :inverse_of => :ranker
 
   def my_network
+<<<<<<< HEAD
     list = Array.new
     self.ranks.each do |rank|
       list << { rankee: rank.rankee, rank: rank.rank }
+=======
+    self.ranks.rankee.map do |rankee|
+      rankee
+>>>>>>> eventviews
       # a change has been made
     end
     list
