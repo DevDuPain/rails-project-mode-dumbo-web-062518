@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   def my_network
     @self.ranks.rankee.map do |rankee|
-      rankee
+      rankee 
     end
   end
 end
