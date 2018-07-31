@@ -7,7 +7,8 @@ class User < ApplicationRecord
 
   def my_network
     @self.ranks.rankee.map do |rankee|
-      rankee 
+      rankee
+      # a change has been made
     end
   end
 end
