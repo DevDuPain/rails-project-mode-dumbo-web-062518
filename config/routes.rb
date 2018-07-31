@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   get "profile", to: "users#show", as: "profile"
   resources :users, only: [:index, :show]
+  resources :events
 end

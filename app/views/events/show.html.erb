@@ -1,0 +1,9 @@
+<ul style="list-style-type:none"><h1><%= @event.name %></h1>
+<li>Created by <%= @event.creator.username %></li>
+<li>Location <%= @event.location.name %></li>
+<li>Address <%= @event.location.address %></li>
+<li>When <%= @event.date %></li>
+<li><p><%= @event.description %></li>
+<li>Look Whose Coming!:<p><% @event.attendees.each do |attendee|%><%= attendee.name%><br></p></li>
+<% end %>
+</ul>
