@@ -5,7 +5,6 @@ class EventsController < ApplicationController
   end
 
   def create
-    byebug
     @event = Event.new(event_params)
     if @event.save
       redirect_to @event
@@ -43,6 +42,6 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:owner_id, :name, :description, :date, :location_id, :required_rank)
+    params.require(:event).permit(:owner_id, :name, :description, :date, :location_id, :required_rank, location:[:name, :address, :description])
   end
 end

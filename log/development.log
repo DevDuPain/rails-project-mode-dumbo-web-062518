@@ -2360,3 +2360,977 @@ Processing by EventsController#show as HTML
 Completed 200 OK in 1176ms (Views: 926.0ms | ActiveRecord: 67.6ms)
 
 
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:10:57 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:9
+  Rendered events/new.html.erb within layouts/application (398.1ms)
+Completed 200 OK in 833ms (Views: 653.4ms | ActiveRecord: 58.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:13:10 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 178ms (Views: 173.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:13:19 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:18:47 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (159.9ms)
+Completed 200 OK in 326ms (Views: 321.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:19:21 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...append=( f.label :location_id "Pick Location");@output_buffe...
+...                               ^):
+  
+app/views/events/new.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:19:24 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...append=( f.label :location_id "Pick Location");@output_buffe...
+...                               ^):
+  
+app/views/events/new.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:19:29 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:22:24 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 155ms (Views: 149.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:25:02 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 187ms (Views: 181.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:25:30 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 130ms (Views: 124.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:27:08 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:6: syntax error, unexpected tLABEL
+...der => "Your Text here", (size: "24x6")  );@output_buffer.sa...
+...                               ^
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:6: syntax error, unexpected ')', expecting =>
+...r Text here", (size: "24x6")  );@output_buffer.safe_append='...
+...                               ^
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:20: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/events/new.html.erb:6: syntax error, unexpected tLABEL
+app/views/events/new.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+app/views/events/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/events/new.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:27:52 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 187ms (Views: 180.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:28:08 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (12.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 259ms (Views: 241.5ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:28:18 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:28:24 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 51ms (Views: 44.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:28:35 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:28:51 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 49ms (Views: 44.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:29:10 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 43ms (Views: 38.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:29:24 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:30:26 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:31:41 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 46ms (Views: 39.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:31:54 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (16.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for nil:NilClass):
+     7:   <%= f.label :date %><br>
+     8:   <%= f.datetime_select :date %><br><br>
+     9:   <%= f.label :location_id, "Pick a Location"%><br>
+    10:   <%= f.collection_select :location_id, Location.all, :id, :name, nil,:placeholder => "Tell everyone about your event!"%><br><br>
+    11:   <%= f.label :required_rank %><br>
+    12:   <%= f.select :required_rank, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]
+    13:  %><br><br>
+  
+app/views/events/new.html.erb:10:in `block in _app_views_events_new_html_erb__2090397815478655598_70303701980980'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__2090397815478655598_70303701980980'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:32:08 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 115ms (Views: 109.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:32:22 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 124ms (Views: 119.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:44:39 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 226ms (Views: 211.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:45:00 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 157ms (Views: 151.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 14:46:48 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:10
+  Rendered events/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 71ms (Views: 66.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:09:57 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:14
+  Rendered events/new.html.erb within layouts/application (131.4ms)
+Completed 200 OK in 607ms (Views: 578.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:11:59 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:14
+  Rendered events/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 496ms (Views: 488.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:12:19 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:14
+  Rendered events/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:12:25 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:14
+  Rendered events/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 67ms (Views: 60.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:12:37 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:14
+  Rendered events/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 75ms (Views: 70.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:12:40 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:14
+  Rendered events/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 70ms (Views: 64.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:13:00 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:14
+  Rendered events/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 148ms (Views: 140.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:13:37 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:14:18 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:17:14 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:26: syntax error, unexpected ':', expecting ')'
+...on_fields.text_field :address :placeholder => "123 Main St. ...
+...                               ^):
+  
+app/views/events/new.html.erb:26: syntax error, unexpected ':', expecting ')'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:18:34 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 242ms (Views: 236.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/edit" for 127.0.0.1 at 2018-07-31 15:20:07 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:22
+Completed 404 Not Found in 11ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=edit):
+  
+app/controllers/events_controller.rb:22:in `show'
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 15:20:12 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (5.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/edit.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 5.9ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/edit.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/edit.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/events/edit.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/events/edit.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 15:20:48 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  Rendered events/edit.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 177ms (Views: 170.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 15:21:51 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  Rendered events/edit.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 243ms (Views: 236.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 15:22:05 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  Rendered events/edit.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 163ms (Views: 157.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 15:22:46 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  Rendered events/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 211ms (Views: 202.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 15:31:13 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  Rendered events/edit.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 200ms (Views: 191.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:42:14 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...=  f.fields_for :location event.location.build do |location_...
+...                               ^):
+  
+app/views/events/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:42:37 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (582.6ms)
+Completed 500 Internal Server Error in 609ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `event' for #<#<Class:0x007fe1b6733e40>:0x007fe1b6b17868>
+Did you mean?  @event):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: true %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:     <%= f.fields_for :location, event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name, :placeholder => "GBruce Media - Marketing" %><br><br>
+    24: 
+  
+app/views/events/new.html.erb:21:in `block in _app_views_events_new_html_erb__2090397815478655598_70303704739280'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__2090397815478655598_70303704739280'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:43:38 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `build' for nil:NilClass):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: true %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:     <%= f.fields_for :location, @event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name, :placeholder => "GBruce Media - Marketing" %><br><br>
+    24: 
+  
+app/views/events/new.html.erb:21:in `block in _app_views_events_new_html_erb__2090397815478655598_70303703457120'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__2090397815478655598_70303703457120'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:50:01 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `build' for nil:NilClass):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: true %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:     <%= f.fields_for :location, @event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name, :placeholder => "GBruce Media - Marketing" %><br><br>
+    24: 
+  
+app/views/events/new.html.erb:21:in `block in _app_views_events_new_html_erb__2090397815478655598_70303727505780'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__2090397815478655598_70303727505780'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 15:59:34 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (53.4ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `build' for nil:NilClass):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: true %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:     <%= f.fields_for :location, @event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name, :placeholder => "GBruce Media - Marketing" %><br><br>
+    24: 
+  
+app/views/events/new.html.erb:21:in `block in _app_views_events_new_html_erb__2090397815478655598_70303752040120'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__2090397815478655598_70303752040120'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:01:14 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:21: syntax error, unexpected keyword_do_block
+...nd=  f.fields_for :location, do |location_fields| @output_bu...
+...                               ^
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/events/new.html.erb:21: syntax error, unexpected keyword_do_block
+app/views/events/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:01:23 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (993.8ms)
+Completed 500 Internal Server Error in 1035ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `event' for #<#<Class:0x007fe1b6733e40>:0x007fe1baa37098>
+Did you mean?  @event):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: true %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:     <%= f.fields_for :location, event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name, :placeholder => "GBruce Media - Marketing" %><br><br>
+    24: 
+  
+app/views/events/new.html.erb:21:in `block in _app_views_events_new_html_erb__2090397815478655598_70303737822660'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__2090397815478655598_70303737822660'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:01:40 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...=  f.fields_for :location event.location.build do |location_...
+...                               ^):
+  
+app/views/events/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:02:56 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:21: syntax error, unexpected keyword_do_block
+...nd=  f.fields_for :location, do |location_fields| @output_bu...
+...                               ^
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/events/new.html.erb:21: syntax error, unexpected keyword_do_block
+app/views/events/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:04:01 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:21: syntax error, unexpected keyword_do_block
+...nd=  f.fields_for :location, do |location_fields| @output_bu...
+...                               ^
+/Users/marybeth/Development/code/rails-project-mode-dumbo-web-062518/app/views/events/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/events/new.html.erb:21: syntax error, unexpected keyword_do_block
+app/views/events/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:04:25 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (3.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/edit.html.erb:21
+  Rendered events/edit.html.erb within layouts/application (41.9ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `build' for #<Location:0x007fe1bc032190>):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:   <%= f.fields_for :location, @event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name %><br><br>
+    24: 
+  
+app/views/events/edit.html.erb:21:in `block in _app_views_events_edit_html_erb___4478595614792859296_70303723466680'
+app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb___4478595614792859296_70303723466680'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:05:04 -0400
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 24.2ms)
+
+
+  
+NoMethodError (undefined method `build' for nil:NilClass):
+  
+app/controllers/events_controller.rb:19:in `new'
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:07:54 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/edit.html.erb:21
+  Rendered events/edit.html.erb within layouts/application (64.5ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 12.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `build' for #<Location:0x007fe1bc5c2cb8>):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:   <!-- <%= f.fields_for :location, @event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name %><br><br>
+    24: 
+  
+app/views/events/edit.html.erb:21:in `block in _app_views_events_edit_html_erb___4478595614792859296_70303739205180'
+app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb___4478595614792859296_70303739205180'
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:07:59 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/edit.html.erb:21
+  Rendered events/edit.html.erb within layouts/application (22.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `build' for #<Location:0x007fe1b88c2930>):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:   <!-- <%= f.fields_for :location, @event.location.build do |location_fields| %>
+    22:     <%= location_fields.label :name %><br>
+    23:     <%= location_fields.text_field :name %><br><br>
+    24: 
+  
+app/views/events/edit.html.erb:21:in `block in _app_views_events_edit_html_erb___4478595614792859296_70303720491320'
+app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb___4478595614792859296_70303720491320'
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:08:18 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  Rendered events/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 187ms (Views: 180.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:09:06 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/edit.html.erb:21
+  Rendered events/edit.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `build' for #<Location:0x007fe1bb3fd410>):
+    18:   <%= f.collection_select :location_id, Location.all, :id, :name %><br><br>
+    19:   Create a Location?<br><p>
+    20: 
+    21:     <%= f.fields_for :location, @event.location.build do |location_field| %>
+    22:       <%= location_field.label :name %><br>
+    23:       <%= location_field.text_field :name %><br><br>
+    24: 
+  
+app/views/events/edit.html.erb:21:in `block in _app_views_events_edit_html_erb___4478595614792859296_70303727523880'
+app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb___4478595614792859296_70303727523880'
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:12:20 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/edit.html.erb:21
+  Rendered events/edit.html.erb within layouts/application (139.9ms)
+Completed 200 OK in 401ms (Views: 391.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:13:57 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (74.5ms)
+Completed 200 OK in 600ms (Views: 374.2ms | ActiveRecord: 37.1ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-07-31 16:14:58 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MFKQZhq0krhIHEFSaUr7NbZ24OdnCKAEbkqNsMSB8zQVgws6INEhmF2NAXTOzO3EcN6fgiZNg+MmywAVtVoNQQ==", "event"=>{"name"=>"Tom Cruise", "date(1i)"=>"2018", "date(2i)"=>"10", "date(3i)"=>"25", "date(4i)"=>"20", "date(5i)"=>"09", "required_rank"=>"4", "location_id"=>"", "location"=>{"name"=>"World", "address"=>"Hi Street"}}, "description"=>"Hello World", "commit"=>"Create Event"}
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/events_controller.rb:9
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:18:43 -0400
+  [1m[35m (27.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/marybeth/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (153.6ms)
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 12.2ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+     5:   <%= f.text_field :name, :placeholder => "Tom Cruises" %><br><br>
+     6: 
+     7:   <%= f.label :description %><br>
+     8:   <%= f.text_area(:description, nil, :placeholder => "Tell everyone about your event!", size: "24x6")  %><br><br>
+     9: 
+    10:   <%= f.label :date %><br>
+    11:   <%= f.datetime_select :date %><br><br>
+  
+app/views/events/new.html.erb:8:in `block in _app_views_events_new_html_erb__323098426627144726_70153619524420'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__323098426627144726_70153619524420'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:19:27 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (38.3ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+     5:   <%= f.text_field :name, :placeholder => "Tom Cruises" %><br><br>
+     6: 
+     7:   <%= f.label :description %><br>
+     8:   <%= f.text_area(:description, nil, :placeholder => "Tell everyone about your event!", size: "24x6")  %><br><br>
+     9: 
+    10:   <%= f.label :date %><br>
+    11:   <%= f.datetime_select :date %><br><br>
+  
+app/views/events/new.html.erb:8:in `block in _app_views_events_new_html_erb__323098426627144726_70153602990520'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__323098426627144726_70153602990520'
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:19:35 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+     5:   <%= f.text_field :name, :placeholder => "Tom Cruises" %><br><br>
+     6: 
+     7:   <%= f.label :description %><br>
+     8:   <%= f.text_area(:description, nil, :placeholder => "Tell everyone about your event!", size: "24x6")  %><br><br>
+     9: 
+    10:   <%= f.label :date %><br>
+    11:   <%= f.datetime_select :date %><br><br>
+  
+app/views/events/new.html.erb:8:in `block in _app_views_events_new_html_erb__323098426627144726_70153631768480'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb__323098426627144726_70153631768480'
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:19:52 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/edit.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+     5:   <%= f.text_field :name %><br><br>
+     6: 
+     7:   <%= f.label :description %><br>
+     8:   <%= f.text_area(:description, nil, size: "24x6")  %><br><br>
+     9: 
+    10:   <%= f.label :date %><br>
+    11:   <%= f.datetime_select :date %><br><br>
+  
+app/views/events/edit.html.erb:8:in `block in _app_views_events_edit_html_erb__2353390213234346269_70153604450660'
+app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb__2353390213234346269_70153604450660'
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-07-31 16:20:05 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:26
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/edit.html.erb:18
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/edit.html.erb:21
+  Rendered events/edit.html.erb within layouts/application (195.6ms)
+Completed 200 OK in 985ms (Views: 960.2ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:20:32 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 123ms (Views: 117.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-07-31 16:21:02 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Psa3cs1dDtFI7MjrsDCbP9moCa4ffWXN7PwJZhTLnB8bFywu9zi98V19iM0Xto3OHwB2y144RiqkfYTDZRBiag==", "event"=>{"name"=>"RED MAN", "description"=>"THIS IS HUGE!", "date(1i)"=>"2018", "date(2i)"=>"2", "date(3i)"=>"31", "date(4i)"=>"20", "date(5i)"=>"08", "required_rank"=>"3", "location_id"=>"", "location"=>{"name"=>"HEY YALL", "address"=>"big world", "description"=>"hello gi"}}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 57888ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:9:in `create'
+Started POST "/events" for 127.0.0.1 at 2018-07-31 16:22:30 -0400
+  [1m[35m (19.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/marybeth/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Psa3cs1dDtFI7MjrsDCbP9moCa4ffWXN7PwJZhTLnB8bFywu9zi98V19iM0Xto3OHwB2y144RiqkfYTDZRBiag==", "event"=>{"name"=>"RED MAN", "description"=>"THIS IS HUGE!", "date(1i)"=>"2018", "date(2i)"=>"2", "date(3i)"=>"31", "date(4i)"=>"20", "date(5i)"=>"08", "required_rank"=>"3", "location_id"=>"", "location"=>{"name"=>"HEY YALL", "address"=>"big world", "description"=>"hello gi"}}, "commit"=>"Create Event"}
+Unpermitted parameter: :location
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/events_controller.rb:9
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 910ms (Views: 684.0ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-07-31 16:24:15 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rYlTcXYjM6X83Q2BIbqFSFrVX+qlKUzDJWmdsHlNml2IWMgtTEaAhelMTaeGPJO5nH0gj+RsbyRt6BAVCJZkKA==", "event"=>{"name"=>"RED MAN", "description"=>"THIS IS HUGE!", "date(1i)"=>"2018", "date(2i)"=>"3", "date(3i)"=>"3", "date(4i)"=>"20", "date(5i)"=>"08", "required_rank"=>"3", "location_id"=>"", "location"=>{"name"=>"Marlon DuPain", "address"=>"25 w 126th st, apt 1/ ground floor", "description"=>"dada"}}, "commit"=>"Create Event"}
+Unpermitted parameter: :location
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/events_controller.rb:9
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (147.6ms)
+Completed 200 OK in 704ms (Views: 535.0ms | ActiveRecord: 35.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-07-31 16:28:11 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jD/CddR+Eh8SoltyKaULDre49nPzxVsFudxwPy4EBFap7lkp7huhPwczG1SOIx3/cRCJFrKAeOLxXf2aX9/6Iw==", "event"=>{"name"=>"RED MAN", "description"=>"THIS IS HUGE!", "date(1i)"=>"2018", "date(2i)"=>"3", "date(3i)"=>"3", "date(4i)"=>"20", "date(5i)"=>"08", "required_rank"=>"3", "location_id"=>"", "location"=>{"name"=>"tha", "address"=>"thth", "description"=>"adafa"}}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 22.4ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Location(#70306992319380) expected, got {"name"=>"tha", "address"=>"thth", "description"=>"adafa"} which is an instance of ActiveSupport::HashWithIndifferentAccess(#70306958744340)):
+  
+app/controllers/events_controller.rb:8:in `create'
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/events/new" for 127.0.0.1 at 2018-07-31 16:31:05 -0400
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/events/new.html.erb:18
+  Rendered events/new.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 263ms (Views: 247.0ms | ActiveRecord: 9.6ms)
+
+
