@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :events, through: :attending
   has_many :my_events, :class_name => 'Event', :inverse_of => :owner
   has_many :availabilities
-  has_many :ranks, :class_name => 'Rank', :inverse_of => :ranker
+  has_many :ranks, :class_name => 'Rank', :foreign_key => :ranker_id, :inverse_of => :ranker
 
   def my_network
     list = Array.new

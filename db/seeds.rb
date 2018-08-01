@@ -17,4 +17,28 @@ dan = User.create(first_name: "Dan", last_name: "Chung", username: "danchung", e
 marlon = User.create(first_name: "Marlon", last_name: "DuPain", username: "marond", email: "test@test.com")
 alex = User.create(first_name: "Alex", last_name: "Neustein", username: "alexn", email: "test@test.com")
 
-event_1 = Event.create(owner_id: dan.id, name: "Event 1", description: "The description of this event.", date: Time.now, location_id: 1)
+flatiron = Location.create(name: "Flatiron School", address: "123 Lovely Lane", description: "#1 School")
+bridge_fresh = Location.create(name: "Bridge Fresh", address: "245 Lonely Lane", description: "#1 Deli")
+
+event_1 = Event.create(owner_id: dan.id, name: "Event 1", description: "The description of this event.", date: Time.now, location_id: flatiron.id)
+event_2 = Event.create(owner_id: marlon.id, name: "Event 2", description: "The description of this event 2.", date: Time.now, location_id: bridge_fresh.id)
+event_3 = Event.create(owner_id: alex.id, name: "Event 3", description: "The description of this event 3.", date: Time.now, location_id: flatiron.id)
+
+Attendee.create(user_id: dan.id, event_id: event_1.id)
+Attendee.create(user_id: marlon.id, event_id: event_1.id)
+Attendee.create(user_id: alex.id, event_id: event_1.id)
+Attendee.create(user_id: dan.id, event_id: event_2.id)
+Attendee.create(user_id: marlon.id, event_id: event_2.id)
+Attendee.create(user_id: marlon.id, event_id: event_3.id)
+
+all = {"morning" => true, "afternoon" => true, "evening" => true, "night" => true }
+random = {"morning" => true, "afternoon" => false, "evening" => true, "night" => false}
+Availability.create(user_id: dan.id, monday: all, tuesday: all, wednesday: all, thursday: all, friday: all, saturday: all, sunday: all)
+Availability.create(user_id: marlon.id, monday: all, tuesday: random, wednesday: all, thursday: random, friday: all, saturday: all, sunday: random)
+Availability.create(user_id: alex.id, monday: random, tuesday: random, wednesday: all, thursday: random, friday: random, saturday: all, sunday: random)
+
+Rank.create(ranker_id: dan.id, rankee_id: marlon.id, rank: 3)
+Rank.create(ranker_id: dan.id, rankee_id: alex.id, rank: 3)
+Rank.create(ranker_id: marlon.id, rankee_id: dan.id, rank: 2)
+Rank.create(ranker_id: alex.id, rankee_id: dan.id, rank: 1)
+Rank.create(ranker_id: alex.id, rankee_id: marlon.id, rank: 5)

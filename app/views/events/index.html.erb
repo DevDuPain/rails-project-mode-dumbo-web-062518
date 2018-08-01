@@ -1,4 +1,11 @@
-<h1>My Events</h1>
+<h1>All Events</h1>
 <ul><% @events.each do |event| %>
-<li><%= event.name %></li>
+  <% event.creator.ranks.each do |a_rank| %>
+    <% if a_rank.rankee.id == 7 && a_rank.rank > 1 %>
+      <li><%= link_to event.name, event %>
+        <%= button_to [:attendees, @events] do %>
+  Make happy <strong><%= @event.attendees %></strong>
+<% end %></li>
+    <% end %>
+  <% end %>
 <% end %></ul>
