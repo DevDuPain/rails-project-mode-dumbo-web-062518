@@ -26,11 +26,11 @@ event_1 = Event.create(owner_id: dan.id, name: "Event 1", description: "The desc
 event_2 = Event.create(owner_id: marlon.id, name: "Event 2", description: "The description of this event 2.", date: Time.now, location_id: bridge_fresh.id)
 event_3 = Event.create(owner_id: alex.id, name: "Event 3", description: "The description of this event 3.", date: Time.now, location_id: flatiron.id)
 
-Attendee.create(user_id: dan.id, event_id: event_1.id)
+Attendee.create(user_id: dan.id, event_id: event_3.id)
 Attendee.create(user_id: marlon.id, event_id: event_1.id)
 Attendee.create(user_id: alex.id, event_id: event_1.id)
 Attendee.create(user_id: dan.id, event_id: event_2.id)
-Attendee.create(user_id: marlon.id, event_id: event_2.id)
+Attendee.create(user_id: alex.id, event_id: event_2.id)
 Attendee.create(user_id: marlon.id, event_id: event_3.id)
 
 # all = {"morning" => true, "day" => true, "evening" => true, "night" => true }

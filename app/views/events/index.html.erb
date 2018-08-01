@@ -2,7 +2,7 @@
 <ul><h3>Priority Events</h3>
   <% @user.get_ranked_contacts.each do |contact| %>
     <% contact.ranks.each do |a_rank| %>
-      <% if a_rank.rankee_id == @user_id && a_rank.rank > 3 %>
+      <% if a_rank.rankee_id == @user_id && a_rank.rank > 2 %>
         <% contact.my_events.each do |event| %>
           <li><%= event.name %></li>
         <% end %>
