@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :availabilities
   has_many :ranks, :class_name => 'Rank', :foreign_key => :ranker_id, :inverse_of => :ranker
 
+  has_secure_password
+
   def my_network
     self.ranks.map do |rank|
       { rankee: rank.rankee, rank: rank.rank }
