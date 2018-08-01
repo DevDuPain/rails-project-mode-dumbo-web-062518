@@ -52,6 +52,7 @@ class User < ApplicationRecord
     end
 
     available
+    ## returns hash of available days and blocks
   end
 
   def get_available_contacts
@@ -62,6 +63,7 @@ class User < ApplicationRecord
     end
 
     available_contacts
+    ## returns hash of user_ids => availability hash
   end
 
 end
