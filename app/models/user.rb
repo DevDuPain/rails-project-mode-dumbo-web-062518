@@ -30,26 +30,37 @@ class User < ApplicationRecord
     ## returns array of ranked contacts
   end
 
+  def schedule
+    
+  end
+
   def compare_availability(user)
     days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-    available = Hash.new
+    available = {}
 
     days.each do |day|
       self_available = self.availabilities[0][:"#{day}"].split("")
       user_available = user.availabilities[0][:"#{day}"].split("")
 
+      available["#{day}"] = {}
+
       for i in 0...4 do
+        is_available = false
+
         if self_available[i] == user_available[i]
-          if i == 0
-            available["#{day}"] = { "morning" => true }
-          elsif i == 1
-            available["#{day}"] = { "day" => true }
-          elsif i == 2
-            available["#{day}"] = { "evening" => true }
-          elsif i == 3
-            available["#{day}"] = { "night" => true }
-          end
+          is_available = true
         end
+
+        if i == 0
+          available["#{day}"]["morning"] = is_available
+        elsif i == 1
+          available["#{day}"]["day"] = is_available
+        elsif i == 2
+          available["#{day}"]["evening"] = is_available
+        elsif i == 3
+          available["#{day}"]["night"] = is_available
+        end
+
       end
     end
 
