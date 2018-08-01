@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "profile", to: "users#show", as: "profile"
   get "profile/edit", to: "users#edit", as: "profile_edit"
   get "dashboard", to: "static#dashboard", as: "dashboard"
+  post "events/attend", to: "events#attend", as: "attend"
+  post "events/unattend", to: "events#unattend", as: "unattend"
   resources :users, only: [:index, :show, :edit]
   resources :events
 end

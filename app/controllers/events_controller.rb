@@ -17,6 +17,22 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
+  def attend
+    attendee = Attendee.create(attendee_params)
+    redirect_to events_path
+  end
+
+  def unattend
+    byebug
+    attendee = Attendee.find_by(user_id: attendee_params[:user_id], event_id: attendee_params[:event_id])
+    if attendee != nil
+      attendee.destroy
+      redirect_to events_path
+    else
+      redirect_to event_path
+    end
+  end
+
   def show
     @event = Event.find(params[:id])
   end
@@ -43,5 +59,9 @@ class EventsController < ApplicationController
   private
   def event_params
     params.require(:event).permit(:owner_id, :name, :description, :date, :location_id, :required_rank, location:[:name, :address, :description])
+  end
+
+  def attendee_params
+    params.require(:attendee).permit(:event_id, :user_id, :interested)
   end
 end

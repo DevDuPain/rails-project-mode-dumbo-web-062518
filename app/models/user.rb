@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :attending, :class_name => 'Attendee', :inverse_of => :user
   has_many :events, through: :attending
-  has_many :my_events, :class_name => 'Event', :inverse_of => :owner
+  has_many :my_events, :class_name => 'Event', :foreign_key => :owner_id, :inverse_of => :creator
   has_many :availabilities
   has_many :ranks, :class_name => 'Rank', :foreign_key => :ranker_id, :inverse_of => :ranker
 
