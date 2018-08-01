@@ -72,7 +72,7 @@ class User < ApplicationRecord
       for i in 0...4 do
         is_available = false
 
-        if self_available[i] == user_available[i]
+        if self_available[i] == user_available[i] && self_available[i].to_i == 1
           is_available = true
         end
 
