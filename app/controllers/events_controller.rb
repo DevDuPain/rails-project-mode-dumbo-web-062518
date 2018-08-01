@@ -17,6 +17,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @event.build_location
   end
 
   def attend
@@ -60,7 +61,10 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:owner_id, :name, :description, :date, :location_id, :required_rank, location:[:name, :address, :description])
+    params.require(:event).permit(:owner_id, :name, :description, :date, :location_id, :required_rank,
+      locations_attributes: [
+        :name, :address, :description
+      ])
   end
 
   def attendee_params
