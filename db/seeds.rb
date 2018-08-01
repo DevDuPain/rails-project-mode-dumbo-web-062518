@@ -13,9 +13,11 @@ Location.destroy_all
 Rank.destroy_all
 User.destroy_all
 
-dan = User.create(first_name: "Dan", last_name: "Chung", username: "danchung", email: "test@test.com")
-marlon = User.create(first_name: "Marlon", last_name: "DuPain", username: "marond", email: "test@test.com")
-alex = User.create(first_name: "Alex", last_name: "Neustein", username: "alexn", email: "test@test.com")
+test_pw = BCrypt::Password.create("test")
+
+dan = User.create(first_name: "Dan", last_name: "Chung", username: "dan", email: "test@test.com", password_digest: test_pw)
+marlon = User.create(first_name: "Marlon", last_name: "DuPain", username: "marlon", email: "test@test.com", password_digest: test_pw)
+alex = User.create(first_name: "Alex", last_name: "Neustein", username: "alex", email: "test@test.com", password_digest: test_pw)
 
 flatiron = Location.create(name: "Flatiron School", address: "123 Lovely Lane", description: "#1 School")
 bridge_fresh = Location.create(name: "Bridge Fresh", address: "245 Lonely Lane", description: "#1 Deli")
