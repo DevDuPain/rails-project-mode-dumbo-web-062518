@@ -4060,3 +4060,933 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 183ms (Views: 155.2ms | ActiveRecord: 23.3ms)
 
 
+<<<<<<< HEAD
+=======
+  
+ActionView::Template::Error (undefined method `to_model' for #<Event::ActiveRecord_Relation:0x007fe1be519bc0>
+Did you mean?  to_xml):
+    3:   <% event.creator.ranks.each do |a_rank| %>
+    4:     <% if a_rank.rankee.id == 7 && a_rank.rank > 1 %>
+    5:       <li><%= link_to event.name, event %>
+    6:         <%= button_to [:attendees, @events] do %>
+    7:   Make happy <strong><%= @event.attendees %></strong>
+    8: <% end %></li>
+    9:     <% end %>
+  
+app/views/events/index.html.erb:6:in `block (2 levels) in _app_views_events_index_html_erb___524368059007444317_70303768680300'
+app/views/events/index.html.erb:3:in `block in _app_views_events_index_html_erb___524368059007444317_70303768680300'
+app/views/events/index.html.erb:2:in `_app_views_events_index_html_erb___524368059007444317_70303768680300'
+Started GET "/users/new" for 127.0.0.1 at 2018-08-01 10:25:33 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dchung/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Sign Up Now!</h1>
+    2: 
+    3: <%= form_for @user do |f| %>
+    4:   <p><%= f.label :username %>: <%= f.text_field :username %></p>
+    5:   <p><%= f.label :first_name %>: <%= f.text_field :first_name %></p>
+    6:   <p><%= f.label :last_name %>: <%= f.text_field :last_name %></p>
+  
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__1095079518517524874_70258707777460'
+Started GET "/users/new" for 127.0.0.1 at 2018-08-01 10:26:15 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Sign Up Now!</h1>
+    2: 
+    3: <%= form_for @user do |f| %>
+    4: <% end %>
+  
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__1095079518517524874_70258721875300'
+Started GET "/users/new" for 127.0.0.1 at 2018-08-01 10:26:46 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 226ms (Views: 193.6ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-01 10:27:35 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-01 10:47:04 -0400
+  
+SyntaxError (/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/config/routes.rb:4: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  get "signup", to: "users#new", as "signup"
+                                     ^):
+  
+config/routes.rb:4: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:47:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:47:30 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 11.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User:0x007fcccb043068>
+Did you mean?  password_digest):
+     5:   <p><%= f.label :first_name %>: <%= f.text_field :first_name %></p>
+     6:   <p><%= f.label :last_name %>: <%= f.text_field :last_name %></p>
+     7:   <p><%= f.label :email %>: <%= f.text_field :email %></p>
+     8:   <p><%= f.label :password %>: <%= f.text_field :password %></p>
+     9:   <p><%= f.label :password_confirm %>: <%= f.text_field :password_confirm %></p>
+    10:   <p><%= f.submit %></p>
+    11: <% end %>
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__1095079518517524874_70258709351800'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__1095079518517524874_70258709351800'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:49:47 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User:0x007fcccbaa0740>
+Did you mean?  password_digest):
+     5:   <p><%= f.label :first_name %>: <%= f.text_field :first_name %></p>
+     6:   <p><%= f.label :last_name %>: <%= f.text_field :last_name %></p>
+     7:   <p><%= f.label :email %>: <%= f.text_field :email %></p>
+     8:   <p><%= f.label :password %>: <%= f.text_field :password %></p>
+     9:   <p><%= f.label :password_confirmation %>: <%= f.text_field :password_confirmation %></p>
+    10:   <p><%= f.submit %></p>
+    11: <% end %>
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__1095079518517524874_70258734556700'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__1095079518517524874_70258734556700'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:50:49 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User:0x007fccc136e800>
+Did you mean?  password_digest):
+     5:   <p><%= f.label :first_name %>: <%= f.text_field :first_name %></p>
+     6:   <p><%= f.label :last_name %>: <%= f.text_field :last_name %></p>
+     7:   <p><%= f.label :email %>: <%= f.text_field :email %></p>
+     8:   <p><%= f.label :password %>: <%= f.text_field :password %></p>
+     9:   <p><%= f.label :password_confirmation %>: <%= f.text_field :password_confirmation %></p>
+    10:   <p><%= f.submit %></p>
+    11: <% end %>
+  
+app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb__1095079518517524874_70258707936520'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__1095079518517524874_70258707936520'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:52:00 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:4:in `new'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:53:10 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:4:in `new'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:56:27 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:4:in `new'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:56:28 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:4:in `new'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:56:29 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:56:29 -0400
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:4:in `new'
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 434ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:4:in `new'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:56:30 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:4:in `new'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:56:51 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dchung/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 222ms (Views: 187.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:58:02 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:58:17 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:59:21 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:11: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...append=( f.submit, "Sign Up!" );@output_buffer.safe_append='...
+...                               ^
+/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:16: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/users/new.html.erb:11: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/users/new.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/new.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:59:29 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:11: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, value: "Sign Up!" );@output_buffer....
+...                               ^):
+  
+app/views/users/new.html.erb:11: syntax error, unexpected tLABEL, expecting '='
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 10:59:38 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:11: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...f.submit, {value: "Sign Up!"} );@output_buffer.safe_append='...
+...                               ^
+/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:16: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/users/new.html.erb:11: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/users/new.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/new.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 11:00:39 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/views/users/new.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting ')'
+....label :password_confirmation "Confirm Password" );@output_b...
+...                               ^):
+  
+app/views/users/new.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 11:00:54 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 13:39:38 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 13:47:31 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-01 14:00:27 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bjvv3OmiPKi0CzA1oVCOaqH8vWFT9p79E5ipbHkOoPkKIeWd3GEBkfdPmJB2dTeck+05ska1exzeJnpJhx53Wg==", "user"=>{"username"=>"test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"fdafd", "last_name"=>"dfafdsa", "email"=>"fdafads"}, "commit"=>"Sign Up!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 94ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-01 14:00:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GL6MuNpYRpY9dvM/RHKbbg24nrIIJOlLssFXCu3wvfN8pIb575t7r34yW5qTVyKYP6kaYR1nDKp/f4QvE+BqUA==", "user"=>{"username"=>"test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"fdafd", "last_name"=>"dfafdsa", "email"=>"fdafads"}, "commit"=>"Sign Up!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (4.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "fdafd"], ["last_name", "dfafdsa"], ["username", "test"], ["password_digest", "$2a$10$JSs64jLyLJA3JiGdBS4I5.kEUHJaImtdGfFKMsH9Zqc681bfmg8BO"], ["email", "fdafads"], ["created_at", "2018-08-01 18:00:31.692293"], ["updated_at", "2018-08-01 18:00:31.692293"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 75ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:00:31 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.4ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.4ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 1]]
+  ↳ app/models/user.rb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  Rendered users/show.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 119ms (Views: 86.7ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:07:17 -0400
+Processing by UsersController#show as HTML
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x007fd1797ba528>
+Did you mean?  user_url):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:09:52 -0400
+Processing by UsersController#show as HTML
+Completed 404 Not Found in 17ms (ActiveRecord: 9.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:10:00 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:10:37 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:10:49 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:11:00 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:11:13 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:11:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:11:26 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:13:00 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]):
+    1: <h1>Log In</h1>
+    2: 
+    3: <%= form_tag session_path do %>
+    4:   <p><%= label_tag "Username" %>: <%= text_field_tag :username %></p>
+    5:   <p><%= label_tag "Password" %>: <%= text_field_tag :password %></p>
+    6:   <p><%= submit_tag "Login" %></p>
+  
+app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__2051042315623456623_70268885800080'
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:13:07 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:13:46 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:13:46 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-01 14:13:49 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:14:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-01 14:14:27 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U8f2ngipguslo1cWbxIkPNF2rmwzJ959AbDYFBtaV/E33fzfPWq/0mbn/7O4N53K42cqvyZkO5zMDgsx5UqAUg==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 17ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:14:27 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-01 14:14:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LkW8tJkcH2H0QGNN9hc4cRkCUOOIPByLirTzJmZorapKX7b1rN8iWLcEy+ghMoGHKxPUMJ1/+WpHCiADmHh6CQ==", "username"=>"fdsafdsa", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "fdsafdsa"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:14:32 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-01 14:14:39 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KXac7uwUxhebLttDdG1YwjbZje/GZHHEdTTP078xdyNNbJav2df7Lthqc+ajSOE0BMgJPNMnlCW4ihz2QSGggA==", "username"=>"danchung", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "danchung"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 5.6ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 14:15:23 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-01 14:15:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C4LUldYnGD0NHcK0iCeK8dj+RNXxArxCyAoreQyGziRvmN7U4+QlBE5ZahFfAjMH6u/ABuRBWaMFtPhc8pYZhw==", "user"=>{"username"=>"test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Flatiron", "last_name"=>"Student", "email"=>"student@flatironschool.com"}, "commit"=>"Sign Up!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Flatiron"], ["last_name", "Student"], ["username", "test"], ["password_digest", "$2a$10$jheOCfXnm4GJLJQVxzmAGura/RtGynPzciMIZkBVMKyczSxtscFw."], ["email", "student@flatironschool.com"], ["created_at", "2018-08-01 18:15:48.682255"], ["updated_at", "2018-08-01 18:15:48.682255"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 71ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:15:48 -0400
+Processing by UsersController#show as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:18:24 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:18:48 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-01 14:18:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H9K6U3YAKjQskMCutNOh3Wg4JovPGbDD4tpEoL0S3aR7yLASQ8MXDW/UaAtj9hgrWimiWNpaVSIvZJeFQwIKBw==", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 89ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:18:54 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.4ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.4ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 4]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 60ms (Views: 40.9ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:19:18 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:19:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-01 14:19:22 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"INA4Rg3lIBUj6NzmmOMooBpEs/cSi12Xjhl0XFIS10lEyjIHOCYdLGCsdENPxpFWKFU3JAfIuHZDp6d5rAIA6g==", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 68ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:19:22 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.2ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.2ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 14:23:23 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dchung/.rvm/gems/ruby-2.3.3/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dchung/.rvm/gems/ruby-2.3.3/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:23:29 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 14:23:39 -0400
+Processing by UsersController#new as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 14:24:07 -0400
+  
+SyntaxError (/Users/dchung/Development/code/week06-mod02/rails-project-mode-dumbo-web-062518/app/controllers/users_controller.rb:4: syntax error, unexpected [, expecting keyword_do or '{' or '('
+  skip_before_action :require_login, only [:new, :create]
+                                           ^):
+  
+app/controllers/users_controller.rb:4: syntax error, unexpected [, expecting keyword_do or '{' or '('
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 14:24:28 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 41ms (Views: 19.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:38 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:50 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:51 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:51 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:52 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:52 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:52 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:24:53 -0400
+Processing by UsersController#show as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-01 14:25:00 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 51ms (Views: 25.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:25:07 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:26:11 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-01 14:26:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oprgnV3RQrjKERL4uX+LhhCXrzpeSi/9cdlS01/o7vhRlUojqwjeulo7fsecaZSn2R/q6XFkHnLaFu6KaVHk5A==", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 88ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:26:14 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.2ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.2ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 53ms (Views: 34.9ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:26:18 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.3ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.2ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-01 14:26:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.2ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.2ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 20.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-08-01 14:26:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.2ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.2ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-08-01 14:26:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.2ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.1ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:26:34 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.2ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.2ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile/edit" for 127.0.0.1 at 2018-08-01 14:26:39 -0400
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-01 14:27:15 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendees" ON "events"."id" = "attendees"."event_id" WHERE "attendees"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mAvailability Load (0.3ms)[0m  [1m[34mSELECT "availabilities".* FROM "availabilities" WHERE "availabilities"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mRank Load (0.2ms)[0m  [1m[34mSELECT "ranks".* FROM "ranks" WHERE "ranks"."ranker_id" = $1[0m  [["ranker_id", 5]]
+  ↳ app/models/user.rb:11
+  Rendered users/show.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 70ms (Views: 33.6ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-08-01 14:27:16 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-08-01 14:27:18 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+>>>>>>> register
