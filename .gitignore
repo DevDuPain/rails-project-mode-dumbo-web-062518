@@ -10,3 +10,5 @@ dev/~$hedule appointments.docx
 /tmp
 *~
 Gemfile.lock
+.byebug_history
+*.old
