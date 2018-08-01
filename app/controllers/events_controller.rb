@@ -4,7 +4,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    byebug
+    @user = User.find(session[:user_id])
   end
 
   def create
