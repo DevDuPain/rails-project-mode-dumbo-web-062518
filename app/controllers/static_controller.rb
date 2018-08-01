@@ -5,4 +5,8 @@ class StaticController < ApplicationController
   def dashboard
     @user = User.find(session[:user_id])
   end
+
+  def home
+    redirect_to dashboard_path
+  end
 end

@@ -4,9 +4,6 @@
   <%= f.label :name %><br>
   <%= f.text_field :name, :placeholder => "Tom Cruises" %><br><br>
 
-  <%= f.hidden_field :owner_id, :value => @user.id %>
-
-
   <%= f.label :description %><br>
   <%= f.text_area(:description, :placeholder => "Tell everyone about your event!", size: "24x6")  %><br><br>
 
@@ -20,7 +17,8 @@
   <%= f.label :location_id, "Search For a Location"%><br>
   <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: true %><br><br>
   Create a Location?<br><p>
-    <%= f.fields_for :location, @event.location do |loc| %>
+
+    <%= f.fields_for :locations, do |loc| %>
       <%= loc.label :name %><br>
       <%= loc.text_field :name, :placeholder => "GBruce Media - Marketing" %><br><br>
 
@@ -29,8 +27,7 @@
 
       <%= loc.label :description %><br>
       <%= loc.text_area(:description, :placeholder => "Tell us a little bit about this place", size: "24x6")  %>
-    <% end %>
-  </p>
+    <% end %></p>
 
   <%= f.submit %>
 
