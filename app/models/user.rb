@@ -58,6 +58,7 @@ class User < ApplicationRecord
     end
 
     schedule
+    ## returns hash of available days and blocks
   end
 
   def compare_availability(user)
