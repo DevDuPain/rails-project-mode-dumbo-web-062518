@@ -1,13 +1,15 @@
 class EventsController < ApplicationController
   before_action :require_login
   skip_before_action :require_login, only: []
-  
+
   def index
     @events = Event.all
+    byebug
   end
 
   def create
     @event = Event.new(event_params)
+
     if @event.save
       redirect_to @event
     else
@@ -17,6 +19,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @user = User.find(session[:user_id])
     @event.build_location
   end
 
@@ -38,6 +41,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    #byebug
   end
 
   def edit
@@ -62,7 +66,7 @@ class EventsController < ApplicationController
   private
   def event_params
     params.require(:event).permit(:owner_id, :name, :description, :date, :location_id, :required_rank,
-      locations_attributes: [
+      location_attributes: [
         :name, :address, :description
       ])
   end
