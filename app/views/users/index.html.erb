@@ -1,0 +1,9 @@
+<h1>Search for Contacts</h1>
+<p><%= text_field_tag "search" %> <%= submit_tag "Search" %></p>
+
+<h1>Your ranked contacts</h1>
+<ul>
+  <% @user.get_ranked_contacts.each do |contact| %>
+    <li><%= contact.full_name %></li>
+  <% end %>
+</ul>
