@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2018_08_01_145909) do
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "interested", default: true
+    t.boolean "hidden", default: false
   end
 
   create_table "availabilities", force: :cascade do |t|
