@@ -1,12 +1,23 @@
-<h1>All Events</h1>
-<ul><% @events.each do |event| %>
+<h1>Network Events</h1>
+<ul><h3>Priority Events</h3>
+  <% @user.get_ranked_contacts.each do |contact| %>
+    <% contact.ranks.each do |a_rank| %>
+      <% if a_rank.rankee_id == @user_id && a_rank.rank > 3 %>
+        <% contact.my_events.each do |event| %>
+          <li><%= event.name %></li>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>
+<ul><h3>Other Events</h3><% @events.each do |event| %>
   <% event.creator.ranks.each do |a_rank| %>
-    <% if a_rank.rankee.id == 1 && a_rank.rank > 1 %>
+    <% if a_rank.rankee.id == @user.id && a_rank.rank > 1 %>
       <li><%= link_to event.name, event %>
-        <% if User.find(1).events.include? event %>
-          <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> 1, hidden: true}}} , :method=>:update  %>
+        <% if User.find(@user.id).events.include? event %>
+          <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update  %>
         <% else %>
-           <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> 1}}} , :method=>:post  %>
+           <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id}}} , :method=>:post  %>
         <%# :user_id=> session[:user_id]}  %>
         <% end %>
       </li>
