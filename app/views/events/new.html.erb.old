@@ -18,7 +18,16 @@
   <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: true %><br><br>
   Create a Location?<br><p>
 
-  </p>
+    <%= f.fields_for :locations, do |loc| %>
+      <%= loc.label :name %><br>
+      <%= loc.text_field :name, :placeholder => "GBruce Media - Marketing" %><br><br>
+
+      <%= loc.label :address %><br>
+      <%= loc.text_field :address, :placeholder => "123 Main St. Flushing, NY, 11354" %><br><br>
+
+      <%= loc.label :description %><br>
+      <%= loc.text_area(:description, :placeholder => "Tell us a little bit about this place", size: "24x6")  %>
+    <% end %></p>
 
   <%= f.submit %>
 
