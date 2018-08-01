@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
-
+  before_action :require_login
+  skip_before_action :require_login, only: []
+  
   def index
     @events = Event.all
   end
