@@ -4,27 +4,35 @@
 <p>Username: <%= @user.username %></p>
 <p>Birthdate: <%= @user.birthdate %></p>
 
-<h2>My Events</h2>
-<ul>
-  <% @user.events.each do |event| %>
-    <li><%= event.name %></li>
-  <% end %>
-</ul>
-
 <h2>My Availability</h2>
-<% @user.availabilities.each do |availability| %>
-  <p>Monday: <%= availability.monday %></p>
-  <p>Tuesday: <%= availability.tuesday %></p>
-  <p>Wednesday: <%= availability.wednesday %></p>
-  <p>Thursday: <%= availability.thursday %></p>
-  <p>Friday: <%= availability.friday %></p>
-  <p>Saturday: <%= availability.saturday %></p>
-  <p>Sunday: <%= availability.sunday %></p>
-<% end %>
+<div class="container">
+  <% days_array = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] %>
+  <% blocks_array = ["morning", "day", "evening", "night"] %>
 
-<h2>My Network</h2>
-<ul>
-  <% @user.my_network.each do |rank| %>
-    <li><%= rank[:rankee].full_name %> - <%= rank[:rank] %></li>
+  <div class="row seven-cols">
+    <div class="col-md">Monday</div>
+    <div class="col-md">Tuesday</div>
+    <div class="col-md">Wednesday</div>
+    <div class="col-md">Thursday</div>
+    <div class="col-md">Friday</div>
+    <div class="col-md">Saturday</div>
+    <div class="col-md">Sunday</div>
+  </div>
+
+  <% blocks_array.each do |block| %>
+    <div class="row seven-cols">
+      <% days_array.each do |day| %>
+        <div class="col-md">
+          <div class="card m-1">
+            <a href="#">
+            <div class="card-body <%= @user.schedule[day][block] == true ? "avail" : "" %>">
+              <%= @user.schedule[day][block] == true ? "available" : "unavailable" %>
+            </div>
+            </a>
+          </div>
+
+        </div>
+      <% end %>
+    </div>
   <% end %>
-</ul>
+</div>
