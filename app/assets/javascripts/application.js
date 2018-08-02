@@ -14,3 +14,17 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+$('#locations a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+$('#new-location a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
