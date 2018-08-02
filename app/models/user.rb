@@ -14,6 +14,13 @@ class User < ApplicationRecord
     ## returns array of hashes
   end
 
+  # def my_network_hash
+  #   self.ranks.map do |rank|
+  #     {rank.rankee: rank.rank }
+  #   end
+    ## returns array of hashes
+  # end
+
   def full_name
     "#{self.first_name} #{self.last_name}"
   end

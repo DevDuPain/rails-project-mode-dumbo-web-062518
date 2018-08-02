@@ -3,7 +3,13 @@
 
 <h1>Your ranked contacts</h1>
 <ul>
-  <% @user.get_ranked_contacts.each do |contact| %>
-    <li><%= contact.full_name %></li>
+  <% @user.my_network.each do |contact| %>
+    <li>
+    <%= form_tag({action: :make_rank}) do %>
+      <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
+      <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+      <%= contact[:rankee].full_name %> <%= select_tag "rank[rank]", options_for_select(1..5), :prompt => contact[:rank] %>
+    <%= submit_tag "👍"%></li>
+    <% end %>
   <% end %>
 </ul>
