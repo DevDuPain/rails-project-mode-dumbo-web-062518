@@ -26,11 +26,13 @@
       </div>
       <div class="card-body">
         <ul class="list-group">
+          <% contacts_array = [] %>
           <% @user.my_network.each do |contact| %>
             <li class="list-group-item">
             <%= form_tag({action: :make_rank}) do %>
               <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
               <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+              <% contacts_array.push(contact[:rankee]) %>
               <%= contact[:rankee].full_name %> <%= select_tag "rank[rank]", options_for_select(1..5), :prompt => contact[:rank] %>
             <%= submit_tag "👍"%></li>
             <% end %>
@@ -46,7 +48,7 @@
         <ul class="list-group">
           <% @user.my_network.each do |contact| %>
             <% contact[:rankee].ranks.select do |arank| %>
-              <% if arank.rankee != @user %>
+              <% if arank.rankee != @user && contacts_array.exclude?(arank.rankee) %>
                 <li class="list-group-item">
                   <%= form_tag({action: :make_rank}) do %>
                     <%= hidden_field_tag "rank[rankee_id]", arank.rankee.id %>
