@@ -43,7 +43,7 @@ end
 end
 
 30.times do
-  Attendee.create(user_id: Faker::Number.unique.between(1, 100), event_id: Faker::Number.between(1, 40))
+  Attendee.create(user_id: Faker::Number.unique.between(1, 1000), event_id: Faker::Number.between(1, 40))
 end
 # dan = User.create(first_name: "Dan", last_name: "Chung", username: "dan", email: "test@test.com", password_digest: test_pw)
 # marlon = User.create(first_name: "Marlon", last_name: "DuPain", username: "marlon", email: "test@test.com", password_digest: test_pw)

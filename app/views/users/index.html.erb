@@ -33,7 +33,7 @@
               <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
               <%= hidden_field_tag "rank[ranker_id]", @user.id %>
               <% contacts_array.push(contact[:rankee]) %>
-              <%= contact[:rankee].full_name %> <%= select_tag "rank[rank]", options_for_select(1..5), :prompt => contact[:rank] %>
+              <%= contact[:rankee].full_name %> <%= select_tag "rank[rank]", options_for_select((1..5),contact[:rank]) %>
             <%= submit_tag "👍"%></li>
             <% end %>
           <% end %>
