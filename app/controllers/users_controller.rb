@@ -56,6 +56,7 @@ class UsersController < ApplicationController
     time_to_toggle = to_toggle[1]
     day_value = @user.availabilities[0][day_to_toggle]
     index_to_change = User.times_array.index(time_to_toggle)
+    # byebug
     number_to_change = day_value[index_to_change]
     number_to_change == "0" ? number_to_change = "1" : number_to_change = "0"
     day_value[index_to_change] = number_to_change

@@ -1,31 +1,35 @@
-<div class="mt-5">
-  <% greetarray = ["Hey!", "Hi!", "Hey there.", "How's it going?", "How are you doing?", "What's up?", "What's new?", "What's going on?", "How's everything?", "How are things?", "How's life!", "How's your day?", "How's your day going?", "Good to see you!", "Nice to see you.", "How have you been?", "Yo!", "Howdy!", "Sup?", "Whazzup?", "G'day mate!", "Hiya!"] %>
-  <% num = rand(0..22) %>
-  <h1>Kathy says "<%= "#{greetarray[num][0..-2]} #{@user.first_name}#{greetarray[num][-1]}" %>"</h1>
-  <hr>
-  <div class="row">
-    <div class="col-8">
-      <div class="card">
-        <div class="card-header blue">
-          <h2>Upcoming Events</h2>
-        </div>
-        <div class="card-body">
-          <% @user.attending.each do |attend| %>
-            <%= attend.event.name %><br/>
-          <% end %>
-        </div>
+<div class="row mt-5">
+  <div class="col">
+    <% greetarray = ["Hey!", "Hi!", "Hey there.", "How's it going?", "How are you doing?", "What's up?", "What's new?", "What's going on?", "How's everything?", "How are things?", "How's life!", "How's your day?", "How's your day going?", "Good to see you!", "Nice to see you.", "How have you been?", "Yo!", "Howdy!", "Sup?", "Whazzup?", "G'day mate!", "Hiya!"] %>
+    <% num = rand(0..greetarray.length-1) %>
+    <h1>Kathy says "<%= "#{greetarray[num][0..-2]} #{@user.first_name}#{greetarray[num][-1]}" %>"</h1>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-8">
+    <div class="card">
+      <div class="card-header blue">
+        <h2>Upcoming Events</h2>
+      </div>
+      <div class="card-body">
+        <% @user.attending.each do |attend| %>
+          <%= attend.event.name %><br/>
+        <% end %>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-header green">
-          <h2>Top Contacts</h2>
-        </div>
-        <div class="card-body">
-          <% @user.get_ranked_contacts(5).each do |contact| %>
-            <%= contact.full_name %><br/>
-          <% end %>
-        </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header green">
+        <h2>Top Contacts</h2>
+      </div>
+      <div class="card-body">
+        <% @user.get_ranked_contacts(5).each do |contact| %>
+          <%= contact.full_name %><br/>
+        <% end %>
       </div>
     </div>
   </div>
