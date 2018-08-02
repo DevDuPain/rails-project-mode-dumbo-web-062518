@@ -1,11 +1,19 @@
-<h1>Log In</h1>
+<div class="row justify-content-md-center mt-5">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Log In</h2>
 
-<%= form_tag login_path do %>
-  <div class="form-group">
-    <%= text_field_tag :username, nil, {class: "form-control form-control-lg", placeholder: "Username"} %>
+        <%= form_tag login_path do %>
+          <div class="form-group">
+            <%= text_field_tag :username, nil, {class: "form-control form-control-lg", placeholder: "Username"} %>
+          </div>
+          <div class="form-group">
+            <%= text_field_tag :password, nil, {class: "form-control form-control-lg", placeholder: "Password"} %>
+          </div>
+          <%= submit_tag "Login", {class: "btn btn-primary"} %> <%= link_to "Signup", signup_path, class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <%= text_field_tag :password, nil, {class: "form-control form-control-lg", placeholder: "Password"} %>
-  </div>
-  <p><%= submit_tag "Login", {class: "btn btn-primary"} %></p>
-<% end %>
+</div>
