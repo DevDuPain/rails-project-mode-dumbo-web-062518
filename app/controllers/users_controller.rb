@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def index
     @user = User.find(session[:user_id])
-    # byebug
   end
 
   def new
@@ -40,7 +39,6 @@ class UsersController < ApplicationController
   end
 
   def make_rank
-    byebug
     rank = Rank.find_by(rankee_id: rank_params[:rankee_id], ranker_id: rank_params[:ranker_id])
     if rank != nil
       rank.update(rank_params)

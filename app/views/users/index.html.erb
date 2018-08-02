@@ -13,5 +13,20 @@
     <% end %>
   <% end %>
 </ul>
-
+<h1>People you may know</h1>
+<ul>
+  <% @user.my_network.each do |contact| %>
+    <% contact[:rankee].ranks.select do |arank| %>
+      <% if arank.rankee != @user %><li>
+        <%= form_tag({action: :make_rank}) do %>
+          <%= hidden_field_tag "rank[rankee_id]", arank.rankee.id %>
+          <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+          <%= arank.rankee.full_name %><%= select_tag "rank[rank]", options_for_select(1..5)%>
+          <%= submit_tag "👍"%></li>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>
+<%# left both conflicts in ^marlon ⌄dan %>
 <%= @user.schedule %>

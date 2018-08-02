@@ -29,7 +29,6 @@ class EventsController < ApplicationController
   end
 
   def unattend
-    byebug
     attendee = Attendee.find_by(user_id: attendee_params[:user_id], event_id: attendee_params[:event_id])
     if attendee != nil
       attendee.destroy
@@ -41,7 +40,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    #byebug
   end
 
   def edit
