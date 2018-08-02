@@ -1,9 +1,10 @@
 <div class="row justify-content-md-center mt-5">
-  <div class="col-4">
+  <div class="col-6">
     <div class="card">
+      <div class="card-header blue">
+        <h2>Log In</h2>
+      </div>
       <div class="card-body">
-        <h2 class="card-title">Log In</h2>
-
         <%= form_tag login_path do %>
           <div class="form-group">
             <%= text_field_tag :username, nil, {class: "form-control form-control-lg", placeholder: "Username"} %>
