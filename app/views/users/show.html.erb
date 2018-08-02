@@ -1,26 +1,27 @@
-<h1>My profile</h1>
 
-<p>Name: <%= @user.full_name %></p>
-<p>Username: <%= @user.username %></p>
-<p>Birthdate: <%= @user.birthdate %></p>
+<div class="card mt-5">
+  <div class="card-body">
+    <h1>My profile</h1>
 
-<h2>My Availability</h2>
-<div class="container">
+    <p>Name: <%= @user.full_name %></p>
+    <p>Username: <%= @user.username %></p>
+    <p>Birthdate: <%= @user.birthdate %></p>
+  </div>
+</div>
+
+<div class="mt-5">
+  <h2>My Availability</h2>
   <% days_array = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] %>
   <% blocks_array = ["morning", "day", "evening", "night"] %>
 
   <div class="row seven-cols">
-    <div class="col-md">Monday</div>
-    <div class="col-md">Tuesday</div>
-    <div class="col-md">Wednesday</div>
-    <div class="col-md">Thursday</div>
-    <div class="col-md">Friday</div>
-    <div class="col-md">Saturday</div>
-    <div class="col-md">Sunday</div>
+    <% days_array.each do |day| %>
+      <div class="col-md m-2"><%= day.titlecase %></div>
+    <% end %>
   </div>
 
   <% blocks_array.each do |block| %>
-    <div class="row seven-cols">
+    <div class="row">
       <% days_array.each do |day| %>
         <div class="col-md">
           <div class="card m-1">
