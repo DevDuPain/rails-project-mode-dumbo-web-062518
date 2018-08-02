@@ -7,6 +7,12 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  def open_schedule
+    if self.availabilities.size == 0
+    Availability.create(user_id: self.id, monday: 1111, tuesday: 1111, wednesday: 1111, thursday: 1111, friday: 1111, saturday: 1111, sunday: 1111)
+    end
+  end
+
   def my_network
     self.ranks.map do |rank|
       { rankee: rank.rankee, rank: rank.rank }
