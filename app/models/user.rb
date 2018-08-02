@@ -10,6 +10,13 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  @@days_array = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+  @@times_array = ["morning", "day", "evening", "night"]
+
+  def self.times_array
+    @@times_array
+  end
+
   def open_schedule
     if self.availabilities.size == 0
     Availability.create(user_id: self.id, monday: 1111, tuesday: 1111, wednesday: 1111, thursday: 1111, friday: 1111, saturday: 1111, sunday: 1111)
