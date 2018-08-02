@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create, :show, :edit]
   resources :events
   resources :sessions, only: [:new, :create, :destroy]
+  get 'profile/*toggle', to: "users#availtoggle"
 end
