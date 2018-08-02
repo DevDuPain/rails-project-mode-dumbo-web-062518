@@ -4,7 +4,13 @@ class UsersController < ApplicationController
 
   def index
     @user = User.find(session[:user_id])
-  end
+    # @users = User.all.sort_by { |user| user.last_name }
+      if params[:term]
+        @users = User.search_by_full_name(params[:term]).with_pg_search_highlight
+      else
+        @users = []
+      end
+    end
 
   def new
     @user = User.new

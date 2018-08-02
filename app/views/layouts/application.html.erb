@@ -12,35 +12,21 @@
   <body>
 
     <% if session.include? :user_id %>
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-        <a href="/" class="navbar-brand">Tactiful Hangouts</a>
-        <div>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #F47C7A;">
+        <a href="/" class="navbar-brand">Kathy</a>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a href="<%= dashboard_path %>" class="nav-link">Dashboard</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">My Network</a></li>
+            <li class="nav-item"><a href="<%= events_path %>" class="nav-link">All Events</a></li>
+            <li class="nav-item"><a href="<%= contacts_path %>" class="nav-link">Manage Contacts</a></li>
             <li class="nav-item"><a href="<%= profile_path %>" class="nav-link">Profile</a></li>
-            <li class="nav-item"><a href="<%= logout_path %>" class="nav-link">Logout</a></li>
+            <li class="nav-item"><%= link_to "Logout", logout_path, data: {confirm: "Are you sure you want to logout?"}, class: "nav-link" %></li>
           </ul>
-        </div>
       </nav>
     <% end %>
 
-    <% if session.include? :user_id %>
-      <div class="container">
-        <%= yield %>
-      </div>
-    <% else %>
-      <div class="row justify-content-md-center mt-5">
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <%= yield %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-
+    <div class="container">
+      <%= yield %>
     </div>
+
   </body>
 </html>

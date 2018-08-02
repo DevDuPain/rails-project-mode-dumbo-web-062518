@@ -1,12 +1,42 @@
-<h1>Sign Up Now!</h1>
+<div class="row justify-content-md-center mt-5">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header green">
+        <h2>Sign Up Now!</h2>
+      </div>
+      <div class="card-body">
+        <%= form_for @user do |f| %>
+          <div class="form-group">
+            <%= f.text_field :username, {class: "form-control form-control-lg", placeholder: "Username"} %>
+          </div>
 
-<%= form_for @user do |f| %>
-  <p><%= f.label :username %>: <%= f.text_field :username %></p>
-  <p><%= f.label :password %>: <%= f.text_field :password %></p>
-  <p><%= f.label :password_confirmation, "Confirm Password" %>: <%= f.text_field :password_confirmation %></p>
-  <br>
-  <p><%= f.label :first_name %>: <%= f.text_field :first_name %></p>
-  <p><%= f.label :last_name %>: <%= f.text_field :last_name %></p>
-  <p><%= f.label :email %>: <%= f.text_field :email %></p>
-  <p><%= f.submit "Sign Up!" %></p>
-<% end %>
+          <div class="form-group">
+            <%= f.password_field :password, {class: "form-control form-control-lg", placeholder: "Password"} %>
+          </div>
+
+          <div class="form-group">
+            <%= f.password_field :password_confirmation, {class: "form-control form-control-lg", placeholder: "Confirm Password"} %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :first_name, {class: "form-control form-control-lg", placeholder: "First Name"} %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :last_name, {class: "form-control form-control-lg", placeholder: "Last Name"} %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :email, {class: "form-control form-control-lg", placeholder: "Email"} %>
+          </div>
+
+          <div class="row">
+            <div class="col"><%= f.submit "Sign Up!", {class: "btn btn-success"} %></div>
+            <div class="col text-right"><%= link_to "Already have an account?", login_path %></div>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
