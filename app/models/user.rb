@@ -37,25 +37,61 @@ class User < ApplicationRecord
     ## returns array of ranked contacts
   end
 
-  def compare_availability(user)
-    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-    available = Hash.new
+  def schedule
+    schedule = {}
 
-    days.each do |day|
+    days_array.each do |day|
+      self_available = self.availabilities[0][:"#{day}"].split("")
+
+      schedule["#{day}"] = {}
+
+      self_available.each_with_index do |avail, index|
+        is_available = false
+
+        if avail.to_i == 1
+          is_available = true
+        end
+
+        if index == 0
+          schedule["#{day}"]["morning"] = is_available
+        elsif index == 1
+          schedule["#{day}"]["day"] = is_available
+        elsif index == 2
+          schedule["#{day}"]["evening"] = is_available
+        elsif index == 3
+          schedule["#{day}"]["night"] = is_available
+        end
+      end
+    end
+
+    schedule
+    ## returns hash of available days and blocks
+  end
+
+  def compare_availability(user)
+    available = {}
+
+    days_array.each do |day|
       self_available = self.availabilities[0][:"#{day}"].split("")
       user_available = user.availabilities[0][:"#{day}"].split("")
 
+      available["#{day}"] = {}
+
       for i in 0...4 do
-        if self_available[i] == user_available[i]
-          if i == 0
-            available["#{day}"] = { "morning" => true }
-          elsif i == 1
-            available["#{day}"] = { "day" => true }
-          elsif i == 2
-            available["#{day}"] = { "evening" => true }
-          elsif i == 3
-            available["#{day}"] = { "night" => true }
-          end
+        is_available = false
+
+        if self_available[i] == user_available[i] && self_available[i].to_i == 1
+          is_available = true
+        end
+
+        if i == 0
+          available["#{day}"]["morning"] = is_available
+        elsif i == 1
+          available["#{day}"]["day"] = is_available
+        elsif i == 2
+          available["#{day}"]["evening"] = is_available
+        elsif i == 3
+          available["#{day}"]["night"] = is_available
         end
       end
     end
@@ -73,6 +109,12 @@ class User < ApplicationRecord
 
     available_contacts
     ## returns hash of user_ids => availability hash
+  end
+
+  private
+
+  def days_array
+    ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
   end
 
 end
