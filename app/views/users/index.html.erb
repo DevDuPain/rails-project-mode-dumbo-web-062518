@@ -1,5 +1,12 @@
 <h1>Search for Contacts</h1>
-<p><%= text_field_tag "search" %> <%= submit_tag "Search" %></p>
+<p><%= form_tag users_path, method: :get do %>
+Search by first name, last name, or username:<br>
+  <%= text_field_tag 'term', params[:term], placeholder: "Enter search terms" %>
+  <%= submit_tag 'Search!' %>
+<% end %></p>
+
+<%= render :partial => "search" %>
+
 
 <h1>Your ranked contacts</h1>
 <ul>

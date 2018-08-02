@@ -46,3 +46,11 @@ Rank.create(ranker_id: dan.id, rankee_id: alex.id, rank: 4)
 Rank.create(ranker_id: marlon.id, rankee_id: dan.id, rank: 2)
 Rank.create(ranker_id: alex.id, rankee_id: dan.id, rank: 1)
 Rank.create(ranker_id: alex.id, rankee_id: marlon.id, rank: 5)
+
+1000.times do
+  the_first_name = Faker::Name.first_name
+  the_last_name = Faker::Name.last_name
+  the_username = Faker::Internet.user_name("#{the_first_name} #{the_last_name}", %w(. _ -))
+  the_email = Faker::Internet.email("#{the_first_name}+#{the_last_name}")
+  User.create(first_name: the_first_name, last_name: the_last_name, username: the_username, email: the_email, password_digest: test_pw)
+end

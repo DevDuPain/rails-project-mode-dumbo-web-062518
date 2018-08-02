@@ -1,0 +1,10 @@
+<% @users.each do |u| %>
+<% if u.respond_to?(:pg_search_highlight) %>
+  <% result = u.pg_search_highlight.split(" ") %>
+  <% result[-1] = "(" + result[-1] + ")" %>
+  <%  %>
+   <%= result.join(" ").html_safe %><br>
+ <% else %>
+ <%= "#{u.last_name}, #{u.first_name} - #{u.username}" %><br>
+ <% end %>
+<% end %>

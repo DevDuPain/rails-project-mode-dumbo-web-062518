@@ -5,6 +5,10 @@ ruby '2.3.3'
 # gem "simple_calendar", "~> 2.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
+gem 'faker'
+gem 'pg_search'
+gem 'select2-rails'
+gem 'underscore-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 # Use postgresql as the database for Active Record
