@@ -6,7 +6,7 @@
   <div class="card-body">
     <p>Name: <%= @user.full_name %></p>
     <p>Username: <%= @user.username %></p>
-    <p>Birthdate: <%= @user.birthdate %></p>
+    <p>Birthdate: <%= @user.birthdate.to_s[0..-13] %></p>
   </div>
 </div>
 
