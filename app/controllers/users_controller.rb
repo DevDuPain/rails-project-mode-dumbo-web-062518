@@ -45,6 +45,24 @@ class UsersController < ApplicationController
     end
   end
 
+  def toggle_value(string)
+    teststring == "0" ? teststring = "1" : teststring = "0"
+  end
+
+  def availtoggle
+    @user = User.find(session[:user_id])
+    to_toggle = toggle_params[7..-1].split("-")
+    day_to_toggle = to_toggle[0]
+    time_to_toggle = to_toggle[1]
+    day_value = @user.availabilities[0][day_to_toggle]
+    index_to_change = User.times_array.index(time_to_toggle)
+    number_to_change = day_value[index_to_change]
+    number_to_change == "0" ? number_to_change = "1" : number_to_change = "0"
+    day_value[index_to_change] = number_to_change
+    @user.availabilities.update("#{day_to_toggle}" => day_value)
+    render :show
+  end
+
   def make_rank
     rank = Rank.find_by(rankee_id: rank_params[:rankee_id], ranker_id: rank_params[:ranker_id])
     if rank != nil
@@ -64,5 +82,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation)
+  end
+
+  def toggle_params
+    params.require(:toggle)
   end
 end
