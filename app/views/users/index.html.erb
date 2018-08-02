@@ -1,39 +1,57 @@
-<h1>Search for Contacts</h1>
-<p><%= form_tag users_path, method: :get do %>
-Search by first name, last name, or username:<br>
-  <%= text_field_tag 'term', params[:term], placeholder: "Enter search terms" %>
-  <%= submit_tag 'Search!' %>
-<% end %></p>
+<div class="row">
+  <div class="col mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h2>Search for Contacts</h2>
+      </div>
+      <div class="card-body">
+        <p><%= form_tag users_path, method: :get do %>
+        Search by first name, last name, or username:<br>
+          <%= text_field_tag 'term', params[:term], placeholder: "Enter search terms" %>
+          <%= submit_tag 'Search!' %>
+        <% end %></p>
 
-<%= render :partial => "search" %>
-
-
-<h1>Your ranked contacts</h1>
-<ul>
-  <% @user.my_network.each do |contact| %>
-    <li>
-    <%= form_tag({action: :make_rank}) do %>
-      <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
-      <%= hidden_field_tag "rank[ranker_id]", @user.id %>
-      <%= contact[:rankee].full_name %> <%= select_tag "rank[rank]", options_for_select(1..5), :prompt => contact[:rank] %>
-    <%= submit_tag "👍"%></li>
-    <% end %>
-  <% end %>
-</ul>
-<h1>People you may know</h1>
-<ul>
-  <% @user.my_network.each do |contact| %>
-    <% contact[:rankee].ranks.select do |arank| %>
-      <% if arank.rankee != @user %><li>
-        <%= form_tag({action: :make_rank}) do %>
-          <%= hidden_field_tag "rank[rankee_id]", arank.rankee.id %>
-          <%= hidden_field_tag "rank[ranker_id]", @user.id %>
-          <%= arank.rankee.full_name %><%= select_tag "rank[rank]", options_for_select(1..5)%>
-          <%= submit_tag "👍"%></li>
-        <% end %>
-      <% end %>
-    <% end %>
-  <% end %>
-</ul>
-<%# left both conflicts in ^marlon ⌄dan %>
-<%= @user.schedule %>
+        <%= render :partial => "search" %>
+      </div>
+    </div>
+    <div class="card mt-5">
+      <div class="card-header">
+        <h2>Your Ranked Contacts</h2>
+      </div>
+      <div class="card-body">
+        <ul>
+          <% @user.my_network.each do |contact| %>
+            <li>
+            <%= form_tag({action: :make_rank}) do %>
+              <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
+              <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+              <%= contact[:rankee].full_name %> <%= select_tag "rank[rank]", options_for_select(1..5), :prompt => contact[:rank] %>
+            <%= submit_tag "👍"%></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="card mt-5">
+      <div class="card-header">
+        <h2>People You May Know</h2>
+      </div>
+      <div class="card-body">
+        <ul>
+          <% @user.my_network.each do |contact| %>
+            <% contact[:rankee].ranks.select do |arank| %>
+              <% if arank.rankee != @user %><li>
+                <%= form_tag({action: :make_rank}) do %>
+                  <%= hidden_field_tag "rank[rankee_id]", arank.rankee.id %>
+                  <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+                  <%= arank.rankee.full_name %><%= select_tag "rank[rank]", options_for_select(1..5)%>
+                  <%= submit_tag "👍"%></li>
+                <% end %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
