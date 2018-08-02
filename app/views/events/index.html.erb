@@ -1,19 +1,40 @@
+<div class="row mt-5">
+  <div class="col">
+    <h1>Network Events</h1>
+  </div>
+</div>
+
+<hr>
+<%= link_to "Add Event", new_event_path %>
+
 <div class="row">
   <div class="col">
     <div class="card mt-5">
       <div class="card-header blue">
-        <h2>Network Events</h2>
+        <h3>My Events</h3>
       </div>
       <div class="card-body">
-        <%= link_to "Add Event", new_event_path %>
+
         <ul>
-          <h3>My Events</h3>
           <% @user.my_events.each do |event| %>
             <li><%= link_to event.name, event %></li>
           <% end %>
         </ul>
 
-        <ul><h3>Priority Events</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card mt-5">
+      <div class="card-header green">
+        <h3>Priority Events</h3>
+      </div>
+      <div class="card-body">
+
+        <ul>
           <% @user.get_ranked_contacts.each do |contact| %>
             <% contact.ranks.each do |a_rank| %>
               <% if a_rank.rankee_id == @user_id && a_rank.rank > 2 %>
@@ -30,17 +51,29 @@
           <% end %>
         </ul>
 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card mt-5">
+      <div class="card-header yellow">
+        <h3>Other Events</h3>
+      </div>
+      <div class="card-body">
+
         <ul>
-          <h3>Other Events</h3>
           <% @events.each do |event| %>
             <% event.creator.ranks.each do |a_rank| %>
               <% if a_rank.rankee.id == @user.id && a_rank.rank > 1 %>
-                <li><%= link_to event.name, event %>
+                <li>
+                  <%= link_to event.name, event %>
                   <% if User.find(@user.id).events.include? event %>
                     <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update  %>
                   <% else %>
                      <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id}}} , :method=>:post  %>
-                  <%# :user_id=> session[:user_id]}  %>
                   <% end %>
                 </li>
               <% end %>
