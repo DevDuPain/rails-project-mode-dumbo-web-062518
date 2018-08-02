@@ -1,7 +1,7 @@
 
 <div class="card mt-5">
   <div class="card-body">
-    <h1>My profile</h1>
+    <h1 class="card-title">My Profile</h1>
 
     <p>Name: <%= @user.full_name %></p>
     <p>Username: <%= @user.username %></p>
@@ -16,14 +16,14 @@
 
   <div class="row seven-cols">
     <% days_array.each do |day| %>
-      <div class="col-md m-2"><%= day.titlecase %></div>
+      <div class="col m-2"><%= day.titlecase %></div>
     <% end %>
   </div>
 
   <% blocks_array.each do |block| %>
     <div class="row">
       <% days_array.each do |day| %>
-        <div class="col-md">
+        <div class="col">
           <div class="card m-1">
             <a href="#">
             <div class="card-body <%= @user.schedule[day][block] == true ? "avail" : "" %>">
