@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get "dashboard", to: "static#dashboard", as: "dashboard"
   post "events/attend", to: "events#attend", as: "attend"
   post "events/unattend", to: "events#unattend", as: "unattend"
-
+  post "users/makerank", to: "users#make_rank", as: "make_rank"
   resources :users, only: [:index, :new, :create, :show, :edit]
   resources :events
   resources :sessions, only: [:new, :create, :destroy]

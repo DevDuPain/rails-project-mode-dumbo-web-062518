@@ -1,10 +1,20 @@
 <h1>Network Events</h1>
+<ul><h3>My Events</h3>
+  <% @user.my_events.each do |event| %>
+    <%= link_to event.name, event %>
+  <% end %>
+</ul>
 <ul><h3>Priority Events</h3>
   <% @user.get_ranked_contacts.each do |contact| %>
     <% contact.ranks.each do |a_rank| %>
       <% if a_rank.rankee_id == @user_id && a_rank.rank > 2 %>
         <% contact.my_events.each do |event| %>
-          <li><%= event.name %></li>
+          <li><%= link_to event.name, event %>
+          <% if User.find(@user.id).events.include? event %>
+            <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update  %>
+          <% else %>
+             <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id}}} , :method=>:post  %>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>

@@ -11,5 +11,15 @@
  * It is generally better to create a new file per style scope.
  *
  */
- 
+
 @import "bootstrap";
+
+html, body {
+  background-color: #99f2e4;
+}
+
+.t {
+  background: #ccc;
+}
+
+.avail { color: green; font-weight: bold; }
