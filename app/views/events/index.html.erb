@@ -5,6 +5,7 @@
         <h2>Network Events</h2>
       </div>
       <div class="card-body">
+        <%= link_to "Add Event", new_event_path %>
         <ul>
           <h3>My Events</h3>
           <% @user.my_events.each do |event| %>
@@ -30,7 +31,8 @@
         </ul>
 
         <ul>
-          <h3>Other Events</h3><% @events.each do |event| %>
+          <h3>Other Events</h3>
+          <% @events.each do |event| %>
             <% event.creator.ranks.each do |a_rank| %>
               <% if a_rank.rankee.id == @user.id && a_rank.rank > 1 %>
                 <li><%= link_to event.name, event %>

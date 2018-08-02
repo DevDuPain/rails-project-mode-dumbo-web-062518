@@ -5,11 +5,17 @@
         <h2>Search for Contacts</h2>
       </div>
       <div class="card-body">
-        <p><%= form_tag users_path, method: :get do %>
-        Search by first name, last name, or username:<br>
-          <%= text_field_tag 'term', params[:term], placeholder: "Enter search terms" %>
-          <%= submit_tag 'Search!' %>
-        <% end %></p>
+        <%= form_tag users_path, method: :get do %>
+          <div class="form-group">
+            <%= label_tag "Search by first name, last name, or username:" %>
+            <div class="input-group">
+              <%= text_field_tag 'term', params[:term], placeholder: "Enter search terms", class: "form-control" %>
+              <div class="input-group-append">
+                <%= submit_tag 'Search!', class: "btn btn-secondary" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
 
         <%= render :partial => "search" %>
       </div>
@@ -19,9 +25,9 @@
         <h2>Your Ranked Contacts</h2>
       </div>
       <div class="card-body">
-        <ul>
+        <ul class="list-group">
           <% @user.my_network.each do |contact| %>
-            <li>
+            <li class="list-group-item">
             <%= form_tag({action: :make_rank}) do %>
               <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
               <%= hidden_field_tag "rank[ranker_id]", @user.id %>
@@ -37,16 +43,18 @@
         <h2>People You May Know</h2>
       </div>
       <div class="card-body">
-        <ul>
+        <ul class="list-group">
           <% @user.my_network.each do |contact| %>
             <% contact[:rankee].ranks.select do |arank| %>
-              <% if arank.rankee != @user %><li>
-                <%= form_tag({action: :make_rank}) do %>
-                  <%= hidden_field_tag "rank[rankee_id]", arank.rankee.id %>
-                  <%= hidden_field_tag "rank[ranker_id]", @user.id %>
-                  <%= arank.rankee.full_name %><%= select_tag "rank[rank]", options_for_select(1..5)%>
-                  <%= submit_tag "👍"%></li>
-                <% end %>
+              <% if arank.rankee != @user %>
+                <li class="list-group-item">
+                  <%= form_tag({action: :make_rank}) do %>
+                    <%= hidden_field_tag "rank[rankee_id]", arank.rankee.id %>
+                    <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+                    <%= arank.rankee.full_name %> <%= select_tag "rank[rank]", options_for_select(1..5)%>
+                    <%= submit_tag "👍"%>
+                  <% end %>
+                </li>
               <% end %>
             <% end %>
           <% end %>
