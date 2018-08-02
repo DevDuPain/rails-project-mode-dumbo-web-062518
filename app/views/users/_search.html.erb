@@ -1,10 +1,19 @@
 <% @users.each do |u| %>
 <% if u.respond_to?(:pg_search_highlight) %>
+
+  <%= form_tag({action: :make_rank}) do %>
+
   <% result = u.pg_search_highlight.split(" ") %>
   <% result[-1] = "(" + result[-1] + ")" %>
   <%  %>
-   <%= result.join(" ").html_safe %><br>
- <% else %>
- <%= "#{u.last_name}, #{u.first_name} - #{u.username}" %><br>
+   <%= result.join(" ").html_safe %>
+
+     <%= hidden_field_tag "rank[rankee_id]", u.id %>
+     <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+      <%= select_tag "rank[rank]", options_for_select((1..5)) %>
+   <%= submit_tag "👍"%>
+   <% end %><br>
+ <%# else %>
+ <%# "#{u.last_name}, #{u.first_name} - #{u.usernam}" %>
  <% end %>
 <% end %>
