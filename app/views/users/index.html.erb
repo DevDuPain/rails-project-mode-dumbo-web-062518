@@ -20,6 +20,10 @@
         <%= render :partial => "search" %>
       </div>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
     <div class="card mt-5">
       <div class="card-header green">
         <h2>Your Ranked Contacts</h2>
@@ -28,18 +32,29 @@
         <ul class="list-group">
           <% contacts_array = [] %>
           <% @user.my_network.each do |contact| %>
-            <li class="list-group-item">
             <%= form_tag({action: :make_rank}) do %>
-              <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
-              <%= hidden_field_tag "rank[ranker_id]", @user.id %>
-              <% contacts_array.push(contact[:rankee]) %>
-              <%= contact[:rankee].full_name %> <%= select_tag "rank[rank]", options_for_select((1..5),contact[:rank]) %>
-            <%= submit_tag "👍"%></li>
+              <li class="list-group-item">
+                <%= hidden_field_tag "rank[rankee_id]", contact[:rankee].id %>
+                <%= hidden_field_tag "rank[ranker_id]", @user.id %>
+                <% contacts_array.push(contact[:rankee]) %>
+
+                <div class="row">
+                  <div class="col">
+                    <%= contact[:rankee].full_name %> (<%= contact[:rankee].username %>)
+                  </div>
+                  <div class="col-3">
+                    <%= select_tag "rank[rank]", options_for_select((1..5),contact[:rank]) %>
+                    <%= submit_tag "Save", class: "btn btn-secondary btn-sm"%>
+                  </div>
+                </div>
+              </li>
             <% end %>
           <% end %>
         </ul>
       </div>
     </div>
+  </div>
+  <div class="col">
     <div class="card mt-5">
       <div class="card-header yellow">
         <h2>People You May Know</h2>
@@ -53,8 +68,17 @@
                   <%= form_tag({action: :make_rank}) do %>
                     <%= hidden_field_tag "rank[rankee_id]", arank.rankee.id %>
                     <%= hidden_field_tag "rank[ranker_id]", @user.id %>
-                    <%= arank.rankee.full_name %> <%= select_tag "rank[rank]", options_for_select(1..5)%>
-                    <%= submit_tag "👍"%>
+
+                    <div class="row">
+                      <div class="col">
+                        <%= arank.rankee.full_name %> (<%= contact[:rankee].username %>)
+                      </div>
+                      <div class="col-3">
+                        <%= select_tag "rank[rank]", options_for_select(1..5)%>
+                        <%= submit_tag "Save", class: "btn btn-secondary btn-sm"%>
+                      </div>
+                    </div>
+
                   <% end %>
                 </li>
               <% end %>
