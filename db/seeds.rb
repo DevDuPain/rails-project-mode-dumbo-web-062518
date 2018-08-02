@@ -22,6 +22,7 @@ test_pw = BCrypt::Password.create("test")
   the_email = Faker::Internet.email("#{the_first_name}+#{the_last_name}")
   the_birthdate = Faker::Date.birthday(18, 65).to_s
   User.create(first_name: the_first_name, last_name: the_last_name, username: the_username, email: the_email, password_digest: test_pw, birthdate: the_birthdate)
+  User.last.open_schedule
 end
 
 50.times do
@@ -41,7 +42,6 @@ end
   Event.create(owner_id: Faker::Number.unique.between(1, 100), name: Faker::Hipster.unique.sentence(1..3), description: Faker::Hipster.sentence(5..10), date: Faker::Time.forward(7, :all).to_s[0..-7], location_id: Faker::Number.unique.between(1, 60))
 end
 
-<<<<<<< HEAD
 30.times do
   Attendee.create(user_id: Faker::Number.unique.between(1, 100), event_id: Faker::Number.between(1, 40))
 end
