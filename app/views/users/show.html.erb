@@ -29,10 +29,12 @@
         <% days_array.each do |day| %>
           <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
             <div class="card mt-2 mb-2">
+
+              <div class="card-header"><%= block %></div>
               <a href="#">
-              <div class="card-body <%= @user.schedule[day][block] == true ? "avail" : "" %>">
-                <%= @user.schedule[day][block] == true ? "available" : "unavailable" %>
-              </div>
+                <div class="card-body <%= @user.schedule[day][block] == true ? "avail" : "" %>">
+                  <%= @user.schedule[day][block] == true ? "available" : "unavailable" %>
+                </div>
               </a>
             </div>
 
