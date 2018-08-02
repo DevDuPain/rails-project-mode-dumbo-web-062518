@@ -17,6 +17,10 @@ class User < ApplicationRecord
     @@times_array
   end
 
+  def self.days_array
+    @@days_array
+  end
+
   def open_schedule
     if self.availabilities.size == 0
       Availability.create(user_id: self.id, monday: 1111, tuesday: 1111, wednesday: 1111, thursday: 1111, friday: 1111, saturday: 1111, sunday: 1111)
@@ -62,13 +66,13 @@ class User < ApplicationRecord
         end
 
         if index == 0
-          schedule["#{day}"]["morning"] = is_available
+          schedule["#{day}"][@@times_array[0]] = is_available
         elsif index == 1
-          schedule["#{day}"]["day"] = is_available
+          schedule["#{day}"][@@times_array[1]] = is_available
         elsif index == 2
-          schedule["#{day}"]["evening"] = is_available
+          schedule["#{day}"][@@times_array[2]] = is_available
         elsif index == 3
-          schedule["#{day}"]["night"] = is_available
+          schedule["#{day}"][@@times_array[3]] = is_available
         end
       end
     end
@@ -94,13 +98,13 @@ class User < ApplicationRecord
         end
 
         if i == 0
-          available["#{day}"]["morning"] = is_available
+          available["#{day}"][@@times_array[0]] = is_available
         elsif i == 1
-          available["#{day}"]["day"] = is_available
+          available["#{day}"][@@times_array[1]] = is_available
         elsif i == 2
-          available["#{day}"]["evening"] = is_available
+          available["#{day}"][@@times_array[2]] = is_available
         elsif i == 3
-          available["#{day}"]["night"] = is_available
+          available["#{day}"][@@times_array[3]] = is_available
         end
       end
     end
