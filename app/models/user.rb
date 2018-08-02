@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   def open_schedule
     if self.availabilities.size == 0
-    Availability.create(user_id: self.id, monday: 1111, tuesday: 1111, wednesday: 1111, thursday: 1111, friday: 1111, saturday: 1111, sunday: 1111)
+      Availability.create(user_id: self.id, monday: 1111, tuesday: 1111, wednesday: 1111, thursday: 1111, friday: 1111, saturday: 1111, sunday: 1111)
     end
   end
 
@@ -111,6 +111,10 @@ class User < ApplicationRecord
 
     available_contacts
     ## returns hash of user_ids => availability hash
+  end
+
+  def suggest_available_contacts
+    self.get_available_contacts
   end
 
   private
