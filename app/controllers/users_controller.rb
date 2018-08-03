@@ -61,8 +61,8 @@ class UsersController < ApplicationController
     number_to_change == "0" ? number_to_change = "1" : number_to_change = "0"
     day_value[index_to_change] = number_to_change
     @user.availabilities.update("#{day_to_toggle}" => day_value)
-
-    redirect_to "#{profile_path}#my-availability"
+    
+    redirect_to profile_path
   end
 
   def make_rank
