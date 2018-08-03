@@ -1,8 +1,26 @@
+<style type="text/css">
+  html {
+    background: #222 url(<%= randomized_background_image %>) no-repeat center top;
+    background-size: cover;
+  }
+
+  body {
+    background-color: transparent;
+  }
+</style>
+<!-- <div class="container" id="rotator"> -->
 <div class="row justify-content-md-center mt-5">
   <div class="col-6">
-    <div class="card">
-      <div class="card-header blue">
-        <h2>Log In</h2>
+    <div class="card-header transparent">
+
+    </div>  <div class="card">
+
+      <div class="card-header green">
+
+
+
+          <h2><img src="assets/logo.png"><span class="float-right" style="padding-top: 10px;">Log In</span></h2>
+
       </div>
       <div class="card-body">
         <span class="error" ><%= @errors %></span>
@@ -19,3 +37,4 @@
     </div>
   </div>
 </div>
+<!-- </div> -->
