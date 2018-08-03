@@ -1,8 +1,28 @@
-<h1>Edit Profile</h1>
+<div class="row">
+  <div class="col">
+    <div class="card mt-5">
+      <div class="card-header blue">
+        <h1>Edit Profile</h1>
+      </div>
+      <div class="card-body">
+        <%= form_for @user do |f| %>
 
-<%= form_for @user do |f| %>
-  <p><%= f.label :first_name %>: <%= f.text_field :first_name %></p>
-  <p><%= f.label :last_name %>: <%= f.text_field :last_name %></p>
-  <p><%= f.label :email %>: <%= f.text_field :email %></p>
-  <p><%= f.submit %></p>
-<% end %>
+          <div class="form-group">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.text_field :email, class: "form-control" %>
+          </div>
+          <p><%= f.submit "Save Changes", class: "btn btn-secondary" %></p>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
