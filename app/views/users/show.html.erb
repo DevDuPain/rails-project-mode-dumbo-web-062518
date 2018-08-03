@@ -36,7 +36,6 @@
               <a href=<%= "/profile/toggle-#{day}-#{block}"%>>
                 <div class="card-body text-center">
                   <%= block %>
-                  <%= @user.schedule[day][block] == true ? "available" : "unavailable" %>
                 </div>
               </a>
             </div>
