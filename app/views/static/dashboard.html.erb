@@ -7,8 +7,34 @@
 </div>
 
 <hr>
-
 <div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header yellow">
+        <h2>Available Today</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <% @user.free_today.each do |d| %>
+          <div class="col-3">
+            <div class="card">
+            <div class="card-header">
+              <b><%= d[0].titlecase %></b><br>
+            </div>
+            <div class="card-body">
+            <% d[1].each do |c| %>
+            <%= "#{c.full_name}"%><br>
+            <% end %>
+            </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-4">
   <div class="col-8">
     <div class="card">
       <div class="card-header blue">
