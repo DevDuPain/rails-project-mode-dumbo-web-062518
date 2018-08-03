@@ -136,6 +136,21 @@ class User < ApplicationRecord
     self.get_available_contacts
   end
 
+  def create_empty_week_hash
+    emptyhash = Hash.new
+    @@days_array.each do |d|
+      emptyhash[d] = Hash.new
+        @@times_array.each do |t|
+          emptyhash[d][t] = ""
+        end
+    end
+    return emptyhash
+  end
+
+  def free_this_week
+    avail_contacts = self.get_available_contacts
+  end
+
   private
 
   def days_array
