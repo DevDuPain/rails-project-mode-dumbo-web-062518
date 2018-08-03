@@ -11,8 +11,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true, allow_blank: false, length: { in: 1..20 }
   validates :last_name, presence: true, allow_blank: false, length: { in: 1..20 }
   username_regex = Regexp.escape("/^[a-z0-9]{1,30}$/i")
-  validates :username, presence: true, uniqueness: true, allow_blank: false, format: { with: /username_regex/ }, length: { in: 1..30 }
-  validates :password_digest, presence: true, allow_blank: false, length: { in: 6..15 }
+  validates :username, presence: true, uniqueness: true, allow_blank: false, format: { with: /username_regex/ }, on: :create, length: { in: 1..30 }
+  validates :password_digest, presence: true, allow_blank: false, on: :create, length: { in: 6..15 }
   email_regex = Regexp.escape("/.+@.+\..+/i")
   validates :email, presence: true, format: { with: /email_regex/ }, length: { in: 7..100 }
   has_secure_password
