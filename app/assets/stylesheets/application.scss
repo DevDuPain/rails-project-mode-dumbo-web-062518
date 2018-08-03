@@ -60,6 +60,10 @@ html, body {
   background: #ccc;
 }
 
+.error-wrap {
+  color: red;
+}
+
 .avail .card-body { background: #A8C16D; color: #fff; }
 .avail a:hover { text-decoration: none; }
 .avail a:hover .card-body { background: #94aa5f; }
