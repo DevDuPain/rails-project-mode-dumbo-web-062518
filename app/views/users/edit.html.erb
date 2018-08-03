@@ -19,6 +19,13 @@
             <%= f.label :email %>
             <%= f.text_field :email, class: "form-control" %>
           </div>
+
+          <ul class="error-wrap list-group-flush">
+            <% @user.errors.full_messages.each do |message| %>
+              <li class="list-group-item"><%= message %></li>
+            <% end %>
+          </ul>
+
           <p><%= f.submit "Save Changes", class: "btn btn-secondary" %></p>
 
         <% end %>

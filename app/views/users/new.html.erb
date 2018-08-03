@@ -6,12 +6,6 @@
       </div>
       <div class="card-body">
 
-        <ul>
-          <% @user.errors.messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-
         <%= form_for @user do |f| %>
           <div class="form-group">
             <%= f.text_field :username, {class: "form-control form-control-lg", placeholder: "Username"} %>
@@ -41,6 +35,12 @@
           <div class="form-group">
             <%= f.text_field :email, {class: "form-control form-control-lg", placeholder: "Email"} %>
           </div>
+
+          <ul class="error-wrap list-group-flush">
+            <% @user.errors.full_messages.each do |message| %>
+              <li class="list-group-item"><%= message %></li>
+            <% end %>
+          </ul>
 
           <div class="row">
             <div class="col"><%= f.submit "Sign Up!", {class: "btn btn-success"} %></div>
