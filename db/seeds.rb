@@ -13,11 +13,13 @@ Location.destroy_all
 Rank.destroy_all
 User.destroy_all
 
-test_pw = BCrypt::Password.create("test")
+# test_pw = BCrypt::Password.create("test")
+test_pw = "testing"
 
 ###################
 ## How many users?#
-num_users = 1000
+## Must be > 100
+num_users = 100
 ###################
 
 def generate_availability
@@ -36,9 +38,9 @@ num_users.times do
   last_name = Faker::Name.last_name
 
   if rand(1..2) == 1
-    username = Faker::Internet.unique.user_name(5..20, %w(_ - x))
+    username = Faker::Internet.unique.user_name(5..19)
   else
-    username = Faker::Internet.unique.user_name(5..16, %w(_ - x))
+    username = Faker::Internet.unique.user_name(5..15)
     username = username + rand(1..9999).to_s
   end
 
@@ -49,11 +51,12 @@ num_users.times do
   end
 
   birthdate = Faker::Date.birthday(18, 65).to_s
-  user = User.create(first_name: first_name, last_name: last_name, username: username, email: email, password_digest: test_pw, birthdate: birthdate)
+  # user = User.create(first_name: first_name, last_name: last_name, username: username, email: email, password_digest: test_pw, birthdate: birthdate)
+  user = User.create(first_name: first_name, last_name: last_name, username: username, email: email, password: test_pw, password_confirmation: test_pw, birthdate: birthdate)
 
   Availability.create(user_id: user.id, monday: generate_availability, tuesday: generate_availability, wednesday: generate_availability, thursday: generate_availability, friday: generate_availability, saturday: generate_availability, sunday: generate_availability)
 end
-puts "Done."
+puts "#{User.all.count} done."
 users = User.all
 
 ##
@@ -66,15 +69,16 @@ puts "Populating ranks..."
 
   Rank.create(ranker_id: user.id, rankee_id: user_2.id, rank: rand(1..5))
 end
+puts "#{Rank.all.count} done."
 puts "Done."
 
 ##
 ## Populate Locations
 puts "Populating locations..."
-(num_users / 20).times do
+(num_users / 5).times do
   Location.create(name: Faker::Company.name, address: Faker::Address.full_address, description: Faker::Lorem.paragraph)
 end
-puts "Done."
+puts "#{Location.all.count} done."
 locations = Location.all
 
 ##

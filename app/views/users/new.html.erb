@@ -6,6 +6,12 @@
       </div>
       <div class="card-body">
 
+        <ul>
+          <% @user.errors.messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+
         <%= form_for @user do |f| %>
           <div class="form-group">
             <%= f.text_field :username, {class: "form-control form-control-lg", placeholder: "Username"} %>
