@@ -136,12 +136,31 @@ class User < ApplicationRecord
     self.get_available_contacts
   end
 
-  def create_empty_week_hash
+  def create_empty_week_hash(arg)
+    # "arg" should be the type of empty value in the hash. The options are:
+    # "boolean" = fills the hash with false booleans
+    # "string" = fills the hash with "" empty strings
+    # "nil" = fills the hash with nil values
+    # "array" = fills the hash with empty arrays
+    # "hash" = fills the hash with empty hashes
     emptyhash = Hash.new
     @@days_array.each do |d|
       emptyhash[d] = Hash.new
         @@times_array.each do |t|
-          emptyhash[d][t] = ""
+          case arg
+            when "boolean"
+              emptyhash[d][t] = false
+            when "string"
+              emptyhash[d][t] = ""
+            when "nil"
+              emptyhash[d][t] = nil
+            when "array"
+              emptyhash[d][t] = Array.new
+            when "hash"
+              emptyhash[d][t] = Hash.new
+            else
+              emptyhash[d][t] = ""
+          end
         end
     end
     return emptyhash
@@ -149,6 +168,22 @@ class User < ApplicationRecord
 
   def free_this_week
     avail_contacts = self.get_available_contacts
+    free_this_week_hash = create_empty_week_hash("array")
+    avail_contacts.map do |contact_id, weekhash|
+      # puts "Now looking at #{contact_id}"
+      weekhash.map do |day, dayhash|
+        # puts "now looking at #{day}"
+        dayhash.select do |time, is_available|
+          free_this_week_hash[day][time] << User.find(contact_id) if is_available
+        end
+      end
+    end
+    return free_this_week_hash
+  end
+
+  def free_today
+    free_today_hash = self.free_this_week
+    free_today_hash[Time.now.strftime("%A").downcase]
   end
 
   private
