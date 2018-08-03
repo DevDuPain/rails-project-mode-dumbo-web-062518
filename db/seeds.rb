@@ -30,6 +30,7 @@ puts "Starting seed..."
 
 ##
 ## Populate Users and their Availiabilities
+puts "Populating users and availabilities..."
 num_users.times do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
@@ -52,11 +53,12 @@ num_users.times do
 
   Availability.create(user_id: user.id, monday: generate_availability, tuesday: generate_availability, wednesday: generate_availability, thursday: generate_availability, friday: generate_availability, saturday: generate_availability, sunday: generate_availability)
 end
-puts "Users done."
+puts "Done."
 users = User.all
 
 ##
 ## Populate Ranks
+puts "Populating ranks..."
 (num_users * 5).times do
   user = users.sample
   selected = [user]
@@ -64,36 +66,39 @@ users = User.all
 
   Rank.create(ranker_id: user.id, rankee_id: user_2.id, rank: rand(1..5))
 end
-puts "Rankings done."
+puts "Done."
 
 ##
 ## Populate Locations
+puts "Populating locations..."
 (num_users / 20).times do
   Location.create(name: Faker::Company.name, address: Faker::Address.full_address, description: Faker::Lorem.paragraph)
 end
-puts "Locations done."
+puts "Done."
 locations = Location.all
 
 ##
 ## Populate Events
-(num_users / 3).times do
+puts "Populating events..."
+(num_users * 3).times do
   user = users.sample
   location = locations.sample
   rank = rand(1..5)
 
   Event.create(owner_id: user.id, name: Faker::Hipster.unique.sentence(rand(1..3)), description: Faker::Hipster.sentence(rand(5..10)), date: Faker::Time.forward(7, :all).to_s[0..-7], location_id: location.id, required_rank: rank)
 end
-puts "Events done."
+puts "Done."
 events = Event.all
 
 ##
 ## Populate Attendees
+puts "Populating attendees..."
 (num_users).times do
   user = users.sample
   event = events.sample
   Attendee.create(user_id: user.id, event_id: event.id)
 end
-puts "Attendees done."
+puts "Done."
 
 puts "Seeding done!"
 
