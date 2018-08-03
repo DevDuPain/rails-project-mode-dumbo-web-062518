@@ -34,7 +34,8 @@ puts "Starting seed..."
 ## Populate Users and their Availiabilities
 puts "Populating users and availabilities..."
 
-User.create(first_name: "Testy", last_name: "McTesterson", username: "tester", email: "test@testing.com", password: test_pw, password_confirmation: test_pw, birthdate: "2000/01/01")
+test_user = User.create(first_name: "Testy", last_name: "McTesterson", username: "tester", email: "test@testing.com", password: test_pw, password_confirmation: test_pw, birthdate: "2000/01/01")
+Availability.create(user_id: test_user.id, monday: generate_availability, tuesday: generate_availability, wednesday: generate_availability, thursday: generate_availability, friday: generate_availability, saturday: generate_availability, sunday: generate_availability)
 
 num_users.times do
   first_name = Faker::Name.first_name
@@ -94,7 +95,7 @@ puts "Populating events..."
 
   Event.create(owner_id: user.id, name: Faker::Hipster.unique.sentence(rand(1..3)), description: Faker::Hipster.sentence(rand(5..10)), date: Faker::Time.forward(7, :all).to_s[0..-7], location_id: location.id, required_rank: rank)
 end
-puts "Done."
+puts "#{Event.all.count} done."
 events = Event.all
 
 ##
@@ -105,7 +106,7 @@ puts "Populating attendees..."
   event = events.sample
   Attendee.create(user_id: user.id, event_id: event.id)
 end
-puts "Done."
+puts "#{Attendee.all.count} done."
 
 puts "Seeding done!"
 
