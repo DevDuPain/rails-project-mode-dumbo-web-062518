@@ -8,6 +8,12 @@ class User < ApplicationRecord
   include PgSearch
   pg_search_scope :search_by_full_name, against: [:first_name, :last_name, :username], using: {tsearch: {prefix: true, highlight: {start_sel: '<b>', stop_sel: '</b>'}}}
 
+  validates :first_name, presence: true, allow_blank: false, length: { in: 1..20 }
+  validates :last_name, presence: true, allow_blank: false, length: { in: 1..20 }
+  validates :username, presence: true, uniqueness: true, allow_blank: false, length: { in: 1..30 }
+  validates :password_digest, presence: true, allow_blank: false, length: { in: 6..15 }
+  validates :email, presence: true, format: { with: /.+@.+\..+/i}
+
   has_secure_password
 
   @@days_array = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
