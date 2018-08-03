@@ -10,9 +10,11 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true, allow_blank: false, length: { in: 1..20 }
   validates :last_name, presence: true, allow_blank: false, length: { in: 1..20 }
-  validates :username, presence: true, uniqueness: true, allow_blank: false, length: { in: 1..30 }
+  username_regex = Regexp.escape("/^[a-z0-9]{1,30}$/i")
+  validates :username, presence: true, uniqueness: true, allow_blank: false, format: { with: /username_regex/ }, length: { in: 1..30 }
   validates :password_digest, presence: true, allow_blank: false, length: { in: 6..15 }
-  validates :email, presence: true, format: { with: /.+@.+\..+/i}, length: { in: 7..100 }
+  email_regex = Regexp.escape("/.+@.+\..+/i")
+  validates :email, presence: true, format: { with: /email_regex/ }, length: { in: 7..100 }
   has_secure_password
 
   @@days_array = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]

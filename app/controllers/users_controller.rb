@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(session[:user_id])
 
-    if @user.update
+    if @user.update(profile_params)
       redirect_to profile_path
     else
       render :edit
@@ -83,6 +83,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation)
+  end
+
+  def profile_params
+    params.require(:user).permit(:first_name, :last_name, :email)
   end
 
   def toggle_params
