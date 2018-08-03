@@ -5,7 +5,6 @@
     <h1>Kevin says "<%= "#{greetarray[num][0..-2]} #{@user.first_name}#{greetarray[num][-1]}" %>"</h1>
   </div>
 </div>
-
 <hr>
 <div class="row">
   <div class="col">
@@ -37,13 +36,15 @@
     </div>
   </div>
 </div>
+
+
 <div class="row">
   <div class="col">
     <div class="card">
-      <div class="card-header blue">
-        <h2>Contact Availability For The Week</h2>
-      </div>
-      <div class="card-body">
+      <button class="badge-sm badge-secondary" data-toggle="collapse" data-target="#demo">
+The Week
+      </button>
+      <div class="card-body collapse" id="demo">
         <% @user.free_this_week.each do |d| %>
         <div class="row">
           <% d[1].each do |t| %>
@@ -69,6 +70,7 @@
     </div>
   </div>
 </div>
+
 <div class="row mt-4">
   <div class="col-8">
     <div class="card">
