@@ -6,10 +6,6 @@
       </div>
       <div class="card-body">
 
-        <ul class="error-wrap">
-
-        </div>
-
         <%= form_for @event do |f| %>
           <%= f.hidden_field :owner_id, :value => @user.id %>
 
@@ -67,6 +63,12 @@
               </div>
             </div>
           </div>
+
+          <ul class="error-wrap list-group-flush">
+            <% @event.errors.full_messages.each do |message| %>
+              <li class="list-group-item"><%= message %></li>
+            <% end %>
+          </ul>
 
           <hr class="mt-5">
 

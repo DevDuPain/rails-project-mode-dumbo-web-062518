@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   belongs_to :location
   accepts_nested_attributes_for :location
 
-  validates :owner_id, presence: true
+  validates :owner_id, presence: true, on: :create
   validates :name, presence: true, allow_blank: false, length: { in: 1..70 }
   validates :description, presence: true, allow_blank: false, length: { in: 1..280 }
   validates :date, presence: true
