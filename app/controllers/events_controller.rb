@@ -21,8 +21,6 @@ class EventsController < ApplicationController
     @event = Event.new
     @user = User.find(session[:user_id])
     @event.build_location
-
-    # byebug
   end
 
   def attend
@@ -41,6 +39,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
     @event = Event.find(params[:id])
   end
 
@@ -48,6 +47,9 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @user = User.find(session[:user_id])
     @event.build_location
+    if @event.creator != @user
+      redirect_to event_path(@event)
+    end
   end
 
   def update
