@@ -19,7 +19,7 @@ test_pw = "testing"
 ###################
 ## How many users?#
 ## Must be > 100
-num_users = 100
+num_users = 1000
 ###################
 
 def generate_availability
@@ -33,6 +33,9 @@ puts "Starting seed..."
 ##
 ## Populate Users and their Availiabilities
 puts "Populating users and availabilities..."
+
+User.create(first_name: "Testy", last_name: "McTesterson", username: "tester", email: "test@testing.com", password: test_pw, password_confirmation: test_pw, birthdate: "2000/01/01")
+
 num_users.times do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
