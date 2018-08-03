@@ -21,8 +21,6 @@ class EventsController < ApplicationController
     @event = Event.new
     @user = User.find(session[:user_id])
     @event.build_location
-
-    # byebug
   end
 
   def attend

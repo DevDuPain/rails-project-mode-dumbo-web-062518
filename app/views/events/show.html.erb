@@ -19,7 +19,7 @@
         <% if @event.owner_id == @user.id %>
           <%= link_to "Edit Event", edit_event_path, class: "btn btn-secondary" %>
         <% elsif @user.events.include? @event %>
-          <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => @event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update, class: "btn btn-danger btn-sm"  %>
+          <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => @event.id, :user_id=> @user.id, hidden: true}}} , :method=>:post, class: "btn btn-danger btn-sm"  %>
         <% else %>
            <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => @event.id, :user_id=> @user.id}}} , :method=>:post, class: "btn btn-secondary btn-sm"  %>
         <% end %>
