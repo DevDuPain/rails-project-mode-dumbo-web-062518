@@ -19,4 +19,23 @@ class Event < ApplicationRecord
      end
    end
 
+   def self.get_suggested_events(user)
+     users_ranks = Rank.where("rankee_id = #{user.id}")
+     users_good_ranks = users_ranks.select { |rank| rank.rank > 1 }
+
+     user_ranked = Rank.where("ranker_id = #{user.id}")
+
+     events = Event.all
+     good_events = []
+     users_good_ranks.each do |rank|
+       events.each do |event|
+         if event.owner_id == rank.ranker_id
+           good_events << event
+         end
+       end
+     end
+
+     good_events
+   end
+
 end

@@ -42,9 +42,9 @@
                   <% if event.required_rank >= a_rank.rank %>
                     <li class="list-group-item"><%= link_to event.name, event %>
                     <% if User.find(@user.id).events.include? event %>
-                      <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update  %>
+                      <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update, class: "btn btn-danger btn-sm"  %>
                     <% else %>
-                       <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id}}} , :method=>:post  %>
+                       <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id}}} , :method=>:post, class: "btn btn-secondary btn-sm"  %>
                     <% end %>
                   <% end %>
                 <% end %>
@@ -67,29 +67,23 @@
       <div class="card-body">
 
         <ul class="list-group">
-          <% @events.each do |event| %>
-            <% event.creator.ranks.each do |a_rank| %>
-              <% if a_rank.rankee.id == @user.id && a_rank.rank > 1 %>
-                <% if @user.get_ranked_contacts.exclude? event.creator %>
-                  <li class="list-group-item">
-                    <div class="row">
+          <% Event.get_suggested_events(@user).each do |event| %>
+            <li class="list-group-item">
+              <div class="row">
 
-                      <div class="col-auto">
-                        <% if User.find(@user.id).events.include? event %>
-                          <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update, class: "btn btn-secondary btn-sm"  %>
-                        <% else %>
-                           <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id}}} , :method=>:post, class: "btn btn-secondary btn-sm" %>
-                        <% end %>
-                      </div>
-                      <div class="col">
-                        <%= link_to event.name, event %>
-                      </div>
+                <div class="col-auto">
+                  <% if User.find(@user.id).events.include? event %>
+                    <%= button_to 'Cancel', {:controller => "events", :action => "unattend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id, hidden: true}}} , :method=>:update, class: "btn btn-danger btn-sm"  %>
+                  <% else %>
+                     <%= button_to 'Attend', {:controller => "events", :action => "attend", :params => {:attendee => {:event_id => event.id, :user_id=> @user.id}}} , :method=>:post, class: "btn btn-secondary btn-sm" %>
+                  <% end %>
+                </div>
+                <div class="col">
+                  <%= link_to event.name, event %>
+                </div>
 
-                    </div>
-                  </li>
-                <% end %>
-              <% end %>
-            <% end %>
+              </div>
+            </li>
           <% end %>
         </ul>
 
