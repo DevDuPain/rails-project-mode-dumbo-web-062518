@@ -19,6 +19,12 @@ html, body {
   background-color: #efefef;
 }
 
+#rotator
+{
+	background: #222 url("./stockphotos/image1.jpg") no-repeat center top;
+  background-size: cover;
+}
+
 @media (min-width: 768px){
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
@@ -74,6 +80,10 @@ div.card-header.green {
 
 div.card-header.blue {
   background-color: #7BC4C9;
+}
+
+div.card-header.transparent {
+  background-color: transparent;
 }
 
 div.card-header.yellow {
