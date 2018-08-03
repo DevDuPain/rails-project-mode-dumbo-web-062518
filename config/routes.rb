@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post "events/unattend", to: "events#unattend", as: "unattend"
   post "users/makerank", to: "users#make_rank", as: "make_rank"
   resources :users, only: [:index, :new, :create, :show, :edit, :update]
-  resources :events
+  resources :events, only: [:index, :new, :create, :show, :edit, :update]
   resources :sessions, only: [:new, :create, :destroy]
   get 'profile/*toggle', to: "users#availtoggle"
 end

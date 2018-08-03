@@ -44,6 +44,8 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+    @user = User.find(session[:user_id])
+    @event.build_location
   end
 
   def update

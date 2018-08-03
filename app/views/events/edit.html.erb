@@ -1,34 +1,75 @@
-<h1>Edit Your Event</h1>
-<%= form_for @event do |f| %>
+<div class="row">
+  <div class="col">
+    <div class="card mt-5">
+      <div class="card-header blue">
+        <h2>Make an Event!</h2>
+      </div>
+      <div class="card-body">
 
-  <%= f.label :name %><br>
-  <%= f.text_field :name %><br><br>
+        <%= form_for @event do |f| %>
+          <%= f.hidden_field :owner_id, :value => @user.id %>
 
-  <%= f.label :description %><br>
-  <%= f.text_area(:description, size: "24x6")  %><br><br>
+          <div class="form-group">
+            <%= f.label :name, "Event Name" %>
+            <%= f.text_field :name, :placeholder => "Tom Cruises", :class => "form-control" %>
+          </div>
 
-  <%= f.label :date %><br>
-  <%= f.datetime_select :date %><br><br>
+          <div class="form-group">
+            <%= f.label :description %>
+            <%= f.text_area :description, :placeholder => "Tell everyone about your event!", :size => "24x6", :class => "form-control"  %>
+          </div>
 
-  <%= f.label :required_rank %><br>
-  <%= f.select :required_rank, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]
- %><br><br>
+          <div class="form-group">
+            <%= f.label :date, "Event starts at:" %>
+            <%= f.datetime_select :date, { ampm: true } %>
+          </div>
 
-  <%= f.label :location_id, "Search For a Location"%><br>
-  <%= f.collection_select :location_id, Location.all, :id, :name %><br><br>
-  Create a Location?<br><p>
+          <div class="form-group">
+            <%= f.label :required_rank %><br>
+            <%= f.select :required_rank, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]], { prompt: "Select a required rank"}, { class: "form-control" } %>
+          </div>
 
-    <%= f.fields_for :location, @event.location do |location_field| %>
-      <%= location_field.label :name %><br>
-      <%= location_field.text_field :name %><br><br>
+          <h2 class="card-title mt-5">Location</h2>
 
-      <%= location_field.label :address %><br>
-      <%= location_field.text_field :address %><br><br>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a href="#locations" class="nav-link active" id="locations-tab" data-toggle="tab" role="tab" aria-controls="locations" aria-selected="true" onclick="$('#event_location_attributes_name, #event_location_attributes_address, #event_location_attributes_description').val('')">Previous Locations</a>
+            </li>
+            <li class="nav-item">
+              <a href="#new-location" class="nav-link" id="new-location-tab" data-toggle="tab" role="tab" aria-controls="new-location" aria-selected="false" onclick="$('#event_location_id').val([])">New Location</a>
+            </li>
+          </ul>
 
-      <%= location_field.label :description %><br>
-      <%= location_field.text_area(:description, size: "24x6")  %>
-    <% end %></p>
+          <div class="tab-content pt-3">
+            <div class="tab-pane fade show active" id="locations" role="tabpanel" aria-labelledby="locations-tab">
+              <div class="form-group">
+                <%= f.label :location_id, "Search For a Location"%>
+                <%= f.collection_select :location_id, Location.all, :id, :name, { prompt: "Select a location" }, { class: "form-control" } %>
+              </div>
+            </div>
 
-  <%= f.submit "Update Your Event"%>
+            <div class="tab-pane fade" id="new-location" role="tabpanel" aria-labelledby="new-location-tab">
+              <div class="form-group">
+                <%= f.fields_for :location, @event.location do |loc| %>
+                  <%= loc.label :name %>
+                  <%= loc.text_field :name, :placeholder => "GBruce Media - Marketing", :class => "form-control" %>
 
-<% end %>
+                  <%= loc.label :address %>
+                  <%= loc.text_field :address, :placeholder => "123 Main St. Flushing, NY, 11354", :class => "form-control" %>
+
+                  <%= loc.label :description %>
+                  <%= loc.text_area(:description, :placeholder => "Tell us a little bit about this place", size: "24x6", :class => "form-control")  %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <hr class="mt-5">
+
+          <%= f.submit "Create Event", { class: "btn btn-secondary mt-4" } %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
