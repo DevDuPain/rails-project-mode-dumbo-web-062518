@@ -5,12 +5,12 @@
         <h2><%= @event.name %></h2>
       </div>
       <div class="card-body">
-        <p>Created by: <%= @event.creator.username %></p>
-        <p>Location:<br> <%= @event.location.name %></p>
-        <p>Address<br> <%= @event.location.address %></p>
-        <p>When<br> <%= @event.date %></p>
+        <img src=<%= randomized_background_image %> class="img-fluid eventimage rounded float-right" alt="Responsive image"> <p><b>Hosted by:</b> <%= @event.creator.username %></p>
+        <p><b>Location:</b> <%= @event.location.name %></p>
+        <p><b>Address:</b><br> <%= @event.location.address %></p>
+        <p><b>When:</b><br> <%= @event.date.strftime("%A, %B %-d, %Y at %l:%M %P") %></p>
         <p><%= @event.description %></p>
-        Look Whose Coming!:
+        Look Whose Coming!
         <ul>
           <% @event.attendees.each do |attendee|%>
             <li><%= attendee.user.username %></li>
