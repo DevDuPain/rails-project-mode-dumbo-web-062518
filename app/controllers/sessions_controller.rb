@@ -6,13 +6,15 @@ class SessionsController < ApplicationController
   end
 
   def create
+    @errors = ""
     @user = User.find_by(username: params[:username])
 
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to dashboard_path
     else
-      redirect_to login_path
+      @errors << "Your password and username combination do not match"
+      render :new
     end
   end
 
