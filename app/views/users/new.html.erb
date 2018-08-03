@@ -35,7 +35,7 @@
 
           <div class="form-group">
             <%= f.label :birthdate %>
-            <%= f.date_select :birthdate, {class: "form-control form-control-lg", placeholder: "Birthdate"} %>
+            <%= f.date_select :birthdate, {class: "form-control form-control-lg", placeholder: "Birthdate", start_year: 1910, end_year: 2006, order: [:month, :day, :year], default: { month: 6, day: 15, year: 1980 }} %>
           </div>
 
           <div class="form-group">
