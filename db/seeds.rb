@@ -59,7 +59,7 @@ users = User.all
 ##
 ## Populate Ranks
 puts "Populating ranks..."
-(num_users * 5).times do
+(num_users * 10).times do
   user = users.sample
   selected = [user]
   user_2 = (users - selected).sample
@@ -93,7 +93,7 @@ events = Event.all
 ##
 ## Populate Attendees
 puts "Populating attendees..."
-(num_users).times do
+(num_users * 5).times do
   user = users.sample
   event = events.sample
   Attendee.create(user_id: user.id, event_id: event.id)
