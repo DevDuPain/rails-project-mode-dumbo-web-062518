@@ -54,7 +54,13 @@ html, body {
   background: #ccc;
 }
 
-.avail { color: green; font-weight: bold; }
+.avail .card-body { background: #A8C16D; color: #fff; }
+.avail a:hover { text-decoration: none; }
+.avail a:hover .card-body { background: #94aa5f; }
+
+.unavail .card-body { background: #eee; color: #aaa; }
+.unavail a:hover { text-decoration: none; }
+.unavail a:hover .card-body { background: #dfdfdf; }
 
 .error { color: red;
 font-weight: bold; }

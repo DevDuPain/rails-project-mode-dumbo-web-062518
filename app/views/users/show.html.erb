@@ -11,16 +11,18 @@
 </div>
 
 <div class="card mt-5">
-  <div class="card-header green">
+  <div class="card-header yellow">
+    <a href="#my-availability"></a>
     <h2>My Availability</h2>
   </div>
   <div class="card-body">
+    <p class="card-text">Click a block to toggle</p>
     <% days_array = User.days_array %>
     <% blocks_array = User.times_array %>
-
+    <hr>
     <div class="row seven-cols">
       <% days_array.each do |day| %>
-        <div class="col m-2"><%= day.titlecase %></div>
+        <div class="col m-2 text-center"><%= day.titlecase %></div>
       <% end %>
     </div>
 
@@ -28,11 +30,11 @@
       <div class="row seven-cols">
         <% days_array.each do |day| %>
           <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
-            <div class="card mt-2 mb-2">
+            <div class="card mt-2 mb-2 <%= @user.schedule[day][block] == true ? "avail" : "unavail" %>">
 
-              <div class="card-header"><%= block %></div>
               <a href=<%= "/profile/toggle-#{day}-#{block}"%>>
-                <div class="card-body <%= @user.schedule[day][block] == true ? "avail" : "" %>">
+                <div class="card-body text-center">
+                  <%= block %>
                   <%= @user.schedule[day][block] == true ? "available" : "unavailable" %>
                 </div>
               </a>
