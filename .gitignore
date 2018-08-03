@@ -9,7 +9,6 @@ dev/~$hedule appointments.docx
 !/log/.keep
 /tmp
 *~
-Gemfile.lock
 .byebug_history
 *.old
 dev/~$Presentation1.pptx
