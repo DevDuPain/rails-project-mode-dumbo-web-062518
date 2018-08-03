@@ -15,9 +15,11 @@
         <h2>Upcoming Events</h2>
       </div>
       <div class="card-body">
-        <% @user.attending.each do |attend| %>
-          <%= attend.event.name %><br/>
-        <% end %>
+        <ul class="list-group">
+          <% @user.attending.each do |attend| %>
+            <li class="list-group-item"><%= link_to attend.event.name, attend.event %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
