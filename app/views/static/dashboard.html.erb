@@ -22,6 +22,9 @@
               <b><%= d[0].titlecase %></b><br>
             </div>
             <div class="card-body">
+              <% if !@user.schedule[Time.now.strftime("%A").downcase][d[0]] %>
+                <i>You are busy at this time.</i><br>
+              <% end %>
             <% d[1].each do |c| %>
             <%= "#{c.full_name}"%><br>
             <% end %>
@@ -30,6 +33,38 @@
           </div>
           <% end %>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header blue">
+        <h2>Contact Availability For The Week</h2>
+      </div>
+      <div class="card-body">
+        <% @user.free_this_week.each do |d| %>
+        <div class="row">
+          <% d[1].each do |t| %>
+          <div class="col-3">
+            <div class="card mb-4">
+            <div class="card-header">
+              <b><%= d[0].titlecase %> <%= t[0].titlecase %></b><br>
+            </div>
+            <div class="card-body">
+              <% if !@user.schedule[d[0]][t[0]] %>
+                <i>You are busy at this time.</i><br>
+              <% end %>
+            <% t[1].each do |c| %>
+            <%= "#{c.full_name}"%><br>
+            <% end %>
+            </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
