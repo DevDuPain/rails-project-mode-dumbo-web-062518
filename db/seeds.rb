@@ -13,7 +13,6 @@ Location.destroy_all
 Rank.destroy_all
 User.destroy_all
 
-# test_pw = BCrypt::Password.create("test")
 test_pw = "testing"
 
 ###################
@@ -22,13 +21,17 @@ test_pw = "testing"
 num_users = 200
 ###################
 
+total_rows = 0
+
 def generate_availability
   avail = [rand(0..1), rand(0..1), rand(0..1), rand(0..1)]
   avail = avail.join("")
 end
 
 system "clear"
+puts "Generating #{num_users} users..."
 puts "Starting seed..."
+puts "\n"
 
 ##
 ## Populate Users and their Availiabilities
@@ -55,12 +58,15 @@ num_users.times do
   end
 
   birthdate = Faker::Date.birthday(18, 65).to_s
-  # user = User.create(first_name: first_name, last_name: last_name, username: username, email: email, password_digest: test_pw, birthdate: birthdate)
   user = User.create(first_name: first_name, last_name: last_name, username: username, email: email, password: test_pw, password_confirmation: test_pw, birthdate: birthdate)
 
   Availability.create(user_id: user.id, monday: generate_availability, tuesday: generate_availability, wednesday: generate_availability, thursday: generate_availability, friday: generate_availability, saturday: generate_availability, sunday: generate_availability)
 end
-puts "#{User.all.count} done."
+puts "#{User.all.count} users done."
+puts "#{Availability.all.count} availabilities done."
+puts "\n"
+total_rows += User.all.count
+total_rows += Availability.all.count
 users = User.all
 
 ##
@@ -73,8 +79,9 @@ puts "Populating ranks..."
 
   Rank.create(ranker_id: user.id, rankee_id: user_2.id, rank: rand(1..5))
 end
-puts "#{Rank.all.count} done."
-puts "Done."
+puts "#{Rank.all.count} ranks done."
+puts "\n"
+total_rows += Rank.all.count
 
 ##
 ## Populate Locations
@@ -82,7 +89,9 @@ puts "Populating locations..."
 (num_users / 5).times do
   Location.create(name: Faker::Company.name, address: Faker::Address.full_address, description: Faker::Lorem.paragraph)
 end
-puts "#{Location.all.count} done."
+puts "#{Location.all.count} locations done."
+puts "\n"
+total_rows += Location.all.count
 locations = Location.all
 
 ##
@@ -95,7 +104,9 @@ puts "Populating events..."
 
   Event.create(owner_id: user.id, name: Faker::Hipster.unique.sentence(rand(1..3)), description: Faker::Hipster.sentence(rand(5..10)), date: Faker::Time.forward(7, :all).to_s[0..-7], location_id: location.id, required_rank: rank)
 end
-puts "#{Event.all.count} done."
+puts "#{Event.all.count} events done."
+puts "\n"
+total_rows += Event.all.count
 events = Event.all
 
 ##
@@ -106,6 +117,9 @@ puts "Populating attendees..."
   event = events.sample
   Attendee.create(user_id: user.id, event_id: event.id)
 end
-puts "#{Attendee.all.count} done."
+puts "#{Attendee.all.count} attendees done."
+puts "\n"
+total_rows += Attendee.all.count
 
 puts "Seeding done!"
+puts "Total rows generated: #{total_rows}"
