@@ -1,14 +1,35 @@
-# Rails Project Mode
+# The IRL Social Assistant
 
-Congratulations, we are starting project mode! This means that you'll spend the rest of the week working in a team to build out a Rails project of your choice. There will be some lectures and new material scheduled throughout the week, but the bulk of the time will be working on your projects.
+Created by [Alex Neustein](https://github.com/alexneustein), [Marlon DuPain](https://github.com/DevDuPain), and [Daniel Chung](https://github.com/dlchung)
 
+Built in Ruby on Rails, PostgreSQL, and Bootstrap.
 
-Some example project ideas from previous classes:
+The IRL Social Assistant, aka "Kevin", is designed to provide a medium for implicit communication between you and your contacts, acquaintances, and friends. Allow Kevin to compare your available times with the available times of those you know, or don't know.
 
-1. [Regifter](http://regifter.herokuapp.com/) - A gift trading app that lets users upload images and descriptions of unwanted gifts and propose trades with other users.
-2. [Flatiron Postcard](http://flatironpostcard.herokuapp.com/) - An app that lets you create and send custom postcards to friends and family
-3. Petster - A social media site for pets
+Not sure when your 109 acquaintances are available to hangout this week? No problem. Kevin can help. Your IRL Social Assistant will tell you who can meet up with you for dinner on Wednesday night.
 
+Don't enjoy the company of certain others? No problem. Let Kevin know how much you hate them using our Ranking system. Your IRL Social Assistant will no longer show their availability to you. It also goes both ways. Has Mary been unavailable for the past 3 months? Maybe it was something you said.
+
+Create social events with Kevin. Only your mutual highly ranked contacts will know about your Pajama Party on Friday night.
+
+## Gems
+* pg_search
+* select2-rails
+
+## Setup Instructions
+Install required gems:
+
+    bundle install
+
+Setup database:
+
+    rails db:setup
+
+Start your local rails server:
+
+    rails s
+
+Don't forget to start your PostgreSQL server.
 
 ## Requirements:
 
@@ -18,17 +39,15 @@ Some example project ideas from previous classes:
 
 3. No APIs until you get approval from an instructor.  The reason is because API's oftentimes leads you to learning the specific API really well, but not learning Rails that well.  Rails is a more transferable skill.  So stick with that.
 
-4. Specs - there should be at least 10 specs in your project (five per person). 
+4. Specs - there should be at least 10 specs in your project (five per person).
 
 5. An analytics page - The main learning goal of this is to get you to write some interesting activerecord queries.
 
-6. No JavaScript. Stay focused on Rails for this project - we'll have plenty of time this semeseter to cover JS topics. 
+6. No JavaScript. Stay focused on Rails for this project - we'll have plenty of time this semeseter to cover JS topics.
 
 ## Project Task Guidelines
-- come up with idea, model out domain. 
-- add model tests, start building out basic features. Have some functionality built out by the end of the day. 
-- Iterate on the features that you built yesterday. Go from a 'skateboard' version to a scooter or a bicycle. It doesnt' have to be perfect, but it should be working. 
-- start styling/ cleaning up issues. 
-- issue cleanup and final demos. 
-
-
+- come up with idea, model out domain.
+- add model tests, start building out basic features. Have some functionality built out by the end of the day.
+- Iterate on the features that you built yesterday. Go from a 'skateboard' version to a scooter or a bicycle. It doesnt' have to be perfect, but it should be working.
+- start styling/ cleaning up issues.
+- issue cleanup and final demos.
