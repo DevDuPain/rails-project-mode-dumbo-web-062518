@@ -9,7 +9,7 @@ The IRL Social Assistant, aka "Kevin", is designed to provide a medium for impli
 
 * Not sure when your 109 acquaintances are available to hangout this week? **_No problem_**. Kevin can help. Your IRL Social Assistant will tell you who can meet up with you for dinner on Wednesday night.
 
-* Don't enjoy the company of certain others? **_No problem_**. Let Kevin know how much you hate them using our Ranking system. Your IRL Social Assistant will no longer show their availability to you. It also goes both ways. Has Mary been unavailable for the past 3 months? Maybe it was something you said?
+* Don't enjoy the company of certain others? **_No problem_**. Let Kevin know how much you dislike them using our Ranking system. Your IRL Social Assistant will no longer show their availability to you. It also goes both ways. Has Mary been unavailable for the past 3 months? Maybe it was something you said?
 
 * Create social events with Kevin. Only your mutual highly ranked contacts will know about your Pajama Party on Friday night.
 
