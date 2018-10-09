@@ -1,4 +1,5 @@
-# The IRL Social Assistant
+# "Kevin"
+## The IRL Social Assistant
 
 Created by [Alex Neustein](https://github.com/alexneustein), [Marlon DuPain](https://github.com/DevDuPain), and [Daniel Chung](https://github.com/dlchung)
 
